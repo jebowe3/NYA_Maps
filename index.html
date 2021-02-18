@@ -8,6 +8,8 @@
   <title>NYA in Iowa</title>
   <!-- Add a link to the Leaflet CSS library so you can reference it for styling your map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <!-- Path to the Leaflet opacity control plugin css file -->
+  <link href="css/L.Control.Opacity.css" rel="stylesheet" />
   <!-- All the CSS code goes inside the style tags below -->
   <style>
     /* style the body */
@@ -73,6 +75,8 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
   <!-- Add a link to the jQuery JavaScript library so you can leverage ajax methods to load your data -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Path to the Leaflet opacity control plugin js file -->
+  <script src="js/L.Control.Opacity.js"></script>
   <!-- All JavaScript goes inside the script tags below -->
   <script>
     // define map options
@@ -80,6 +84,8 @@
       zoomSnap: 1, // set zoom increments
       center: [42.0751, -93.496], // center the map on Iowa
       zoom: 8, // set the initial zoom
+      minZoom: 5,
+      maxZoom:11,
     };
 
     // define the map with the options above
@@ -100,7 +106,7 @@
 
     // Add a scale bar
     L.control.scale({
-      position: 'bottomright' // Position the scale bar at the bottom-right corner
+      position: 'bottomleft' // Position the scale bar at the bottom-right corner
     }).addTo(map);
 
     // use jquery to load GeoJSON data
@@ -462,6 +468,18 @@
         collapsed: false,
         position: 'topright',
       }).addTo(map);
+
+      // Give overlay layers (london1889) a title for the opacity control
+      const overMap = {
+        "Iowa State Plan, 1930s": stateParks1930s
+      };
+
+      // The opacity control
+      L.control.opacity(
+        overMap, {
+          label: "<b>Map Transparency</b>" // Give the control a title
+        }
+      ).addTo(map);
 
     });
 
