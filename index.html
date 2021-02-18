@@ -136,6 +136,13 @@
             });
             this.openPopup();
           });
+          layer.on('mouseclick', function() {
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
+            });
+            this.openPopup();
+          });
           layer.on('mouseout', function() {
             this.setStyle({
               'fillColor': '#6b8e23',
