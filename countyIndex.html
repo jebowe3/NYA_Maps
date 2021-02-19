@@ -158,6 +158,18 @@
         },
         onEachFeature: function(feature, layer) {
           layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Unemployment Rate: " + feature.properties.Total_Unemployment_Rate_1940);
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'color': 'yellow',
+              'weight': 2.0,
+            }).bringToFront();
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'color': 'grey',
+              'weight': 1.0,
+            });
+          });
         }
       }).addTo(map);
 
@@ -175,6 +187,18 @@
         },
         onEachFeature: function(feature, layer) {
           layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Female Unemployment Rate: " + feature.properties.Female_Unemployment_Rate_1940);
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'color': 'yellow',
+              'weight': 2.0,
+            }).bringToFront();
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'color': 'grey',
+              'weight': 1.0,
+            });
+          });
         }
       });
 
@@ -193,6 +217,18 @@
         },
         onEachFeature: function(feature, layer) {
           layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Male Unemployment Rate: " + feature.properties.Male_Unemployment_Rate_1940);
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'color': 'yellow',
+              'weight': 2.0,
+            }).bringToFront();
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'color': 'grey',
+              'weight': 1.0,
+            });
+          });
         }
       });
 
