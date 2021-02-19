@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Give the page a title -->
+  <title>NYA in Iowa</title>
+  <!-- Add a link to the Leaflet CSS library so you can reference it for styling your map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <!-- Path to the Leaflet opacity control plugin css file -->
+  <link href="css/L.Control.Opacity.css" rel="stylesheet" />
+  <!-- All the CSS code goes inside the style tags below -->
+  <style>
+    /* style the body */
+    body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* style header */
+    header {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 278px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      z-index: 800;
+    }
+
+    /* the text inputs */
+    h1 {
+      color: black;
+      font-size: 18px;
+      display: inline-block;
+      margin-top: 0.25em;
+      margin-bottom: 0.0em;
+      margin-left: 0.5em;
+      margin-right: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* style the map */
+    #map {
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      bottom: 0;
+    }
+
+    /* the zoom control */
+    .leaflet-top {
+      bottom: 0;
+    }
+
+    .leaflet-top .leaflet-control-zoom {
+      top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <h1>NYA Programs in Iowa: County Statistics, 1940</h1>
+  </header>
+  <!-- the map -->
+  <div id="map"></div>
+  <!-- Add a link to the Leaflet JavaScript library so you can reference it for building your map -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <!-- Add a link to the jQuery JavaScript library so you can leverage ajax methods to load your data -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Path to the Leaflet opacity control plugin js file -->
+  <script src="js/L.Control.Opacity.js"></script>
+  <!-- All JavaScript goes inside the script tags below -->
+  <script>
+    // define map options
+    const mapOptions = {
+      zoomSnap: 1, // set zoom increments
+      center: [42.0751, -93.496], // center the map on Iowa
+      zoom: 8, // set the initial zoom
+      minZoom: 5,
+      maxZoom:11,
+    };
+
+    // define the map with the options above
+    const map = L.map("map", mapOptions);
+
+    // add a base map to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    	maxZoom: 19,
+    	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+    }).addTo(map);
+
+    // Overlay layers (TMS)
+    const stateParks1930s = L.tileLayer('./{z}/{x}/{y}.png', {
+      tms: true,
+      minZoom: 5,
+      maxZoom: 11,
+    }).addTo(map);
+
+    // Add a scale bar
+    L.control.scale({
+      position: 'bottomleft' // Position the scale bar at the bottom-right corner
+    }).addTo(map);
+
+    // Add functions to style the counties by color
+    function unemploymentColor(d) {
+      return d > 10.4 ? '#006837' :
+        d > 7.6 ? '#31a354' :
+        d > 5.9 ? '#78c679' :
+        d > 4.8 ? '#c2e699' :
+        d > 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
+    function femaleUnemploymentColor(d) {
+      return d > 8.1 ? '#bd0026' :
+        d > 6.2 ? '#f03b20' :
+        d > 4.9 ? '#fd8d3c' :
+        d > 3.8 ? '#fecc5c' :
+        d > 0 ? '#ffffb2' :
+        '#1C00ff00';
+    };
+
+    function maleUnemploymentColor(d) {
+      return d > 10.0 ? '#253494' :
+        d > 7.7 ? '#2c7fb8' :
+        d > 5.9 ? '#41b6c4' :
+        d > 4.6 ? '#a1dab4' :
+        d > 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
+    // use jquery to load GeoJSON data
+    $.when(
+      $.getJSON("data/County.geojson"),
+      // when the files are done loading,
+      // identify them with names and process them through a function
+    ).done(function(counties) {
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const unemployment = L.geoJson(counties, {
+        style: function(feature) {
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: unemploymentColor(feature.properties.Total_Unemployment_Rate_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.7
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Unemployment Rate: " + feature.properties.Total_Unemployment_Rate_1940);
+        }
+      }).addTo(map);
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const femaleUnemployment = L.geoJson(counties, {
+        style: function(feature) {
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: femaleUnemploymentColor(feature.properties.Female_Unemployment_Rate_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.7
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Female Unemployment Rate: " + feature.properties.Female_Unemployment_Rate_1940);
+        }
+      });
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const maleUnemployment = L.geoJson(counties, {
+        style: function(feature) {
+          console.log(feature.properties);
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: maleUnemploymentColor(feature.properties.Male_Unemployment_Rate_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.7
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Male Unemployment Rate: " + feature.properties.Male_Unemployment_Rate_1940);
+        }
+      });
+
+      // define layers for layer control
+      const controlLayers = {
+        "Total Unemployment": unemployment,
+        "Female Unemployment": femaleUnemployment,
+        "Male Unemployment": maleUnemployment,
+      };
+
+      // send the layers to the layer control
+      L.control.layers(controlLayers, null, {
+        collapsed: false,
+        position: 'topright',
+      }).addTo(map);
+
+      $(".leaflet-control-layers-base").prepend("<b>Socioeconomic Data, 1940</b>");
+
+      // Give overlay layers a title for the opacity control
+      const overMap = {
+        "Iowa State Plan, 1930s": stateParks1930s
+      };
+
+      // The opacity control
+      L.control.opacity(
+        overMap, {
+          label: "<b>Map Transparency</b>" // Give the control a title
+        }
+      ).addTo(map);
+
+    });
+
+  </script>
+</body>
+
+</html>
