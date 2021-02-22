@@ -146,6 +146,24 @@
         '#1C00ff00';
     };
 
+    function nyaWomenColor(d) {
+      return d > 50.33 ? '#253494' :
+        d > 49.23 ? '#2c7fb8' :
+        d > 48.08 ? '#41b6c4' :
+        d > 43.99 ? '#a1dab4' :
+        d > 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
+    function nyaMenColor(d) {
+      return d > 53.40 ? '#253494' :
+        d > 51.78 ? '#2c7fb8' :
+        d > 50.70 ? '#41b6c4' :
+        d > 49.03 ? '#a1dab4' :
+        d > 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
     // use jquery to load GeoJSON data
     $.when(
       $.getJSON("data/County.geojson"),
@@ -243,7 +261,6 @@
 
       const youngAdultPop = L.geoJson(counties, {
         style: function(feature) {
-          console.log(feature.properties);
           return {
             stroke: 1,
             color: 'grey',
@@ -255,6 +272,62 @@
         },
         onEachFeature: function(feature, layer) {
           layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>NYA-Eligible Population: " + feature.properties.Total_NYA_Pop_Perc_1940 + "%");
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'fillOpacity': 0.8,
+              'weight': 2.0,
+            });
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'fillOpacity': 0.5,
+              'weight': 1.0,
+            });
+          });
+        }
+      });
+
+      const youngWomenPop = L.geoJson(counties, {
+        style: function(feature) {
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: nyaWomenColor(feature.properties.Female_NYA_to_Total_NYA_Perc_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.5
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>NYA-Eligible Women to Total NYA-Eligible Population: " + feature.properties.Female_NYA_to_Total_NYA_Perc_1940 + "%");
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'fillOpacity': 0.8,
+              'weight': 2.0,
+            });
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'fillOpacity': 0.5,
+              'weight': 1.0,
+            });
+          });
+        }
+      });
+
+      const youngMenPop = L.geoJson(counties, {
+        style: function(feature) {
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: nyaMenColor(feature.properties.Male_NYA_to_Total_NYA_Perc_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.5
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>NYA-Eligible Men to Total NYA-Eligible Population: " + feature.properties.Male_NYA_to_Total_NYA_Perc_1940 + "%");
           layer.on("mouseover", function() {
             this.setStyle({
               'fillOpacity': 0.8,
@@ -375,6 +448,8 @@
         "Female Unemployment": femaleUnemployment,
         "Male Unemployment": maleUnemployment,
         "Young Adult Population": youngAdultPop,
+        "Young Women / Young Adults": youngWomenPop,
+        "Young Men / Young Adults": youngMenPop,
       };
 
       const overLays = {
