@@ -120,19 +120,28 @@
     };
 
     function femaleUnemploymentColor(d) {
-      return d > 8.1 ? '#bd0026' :
-        d > 6.2 ? '#f03b20' :
-        d > 4.9 ? '#fd8d3c' :
-        d > 3.8 ? '#fecc5c' :
-        d > 0 ? '#ffffb2' :
+      return d > 8.1 ? '#006837' :
+        d > 6.2 ? '#31a354' :
+        d > 4.9 ? '#78c679' :
+        d > 3.8 ? '#c2e699' :
+        d > 0 ? '#ffffcc' :
         '#1C00ff00';
     };
 
     function maleUnemploymentColor(d) {
-      return d > 10.0 ? '#253494' :
-        d > 7.7 ? '#2c7fb8' :
-        d > 5.9 ? '#41b6c4' :
-        d > 4.6 ? '#a1dab4' :
+      return d > 10.0 ? '#006837' :
+        d > 7.7 ? '#31a354' :
+        d > 5.9 ? '#78c679' :
+        d > 4.6 ? '#c2e699' :
+        d > 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
+    function nyaColor(d) {
+      return d > 26.04 ? '#253494' :
+        d > 24.87 ? '#2c7fb8' :
+        d > 24.03 ? '#41b6c4' :
+        d > 23.15 ? '#a1dab4' :
         d > 0 ? '#ffffcc' :
         '#1C00ff00';
     };
@@ -140,9 +149,10 @@
     // use jquery to load GeoJSON data
     $.when(
       $.getJSON("data/County.geojson"),
+      $.getJSON("data/County_NYA_Participation.geojson")
       // when the files are done loading,
       // identify them with names and process them through a function
-    ).done(function(counties) {
+    ).done(function(counties, participation) {
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const unemployment = L.geoJson(counties, {
@@ -153,20 +163,20 @@
             fillColor: unemploymentColor(feature.properties.Total_Unemployment_Rate_1940),
             strokeOpacity: 1.0,
             weight: 1.0,
-            fillOpacity: 0.7
+            fillOpacity: 0.5
           }
         },
         onEachFeature: function(feature, layer) {
-          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Unemployment Rate: " + feature.properties.Total_Unemployment_Rate_1940);
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Unemployment Rate: " + feature.properties.Total_Unemployment_Rate_1940 + "%");
           layer.on("mouseover", function() {
             this.setStyle({
-              'color': 'yellow',
+              'fillOpacity': 0.8,
               'weight': 2.0,
-            }).bringToFront();
+            });
           });
           layer.on("mouseout", function() {
             this.setStyle({
-              'color': 'grey',
+              'fillOpacity': 0.5,
               'weight': 1.0,
             });
           });
@@ -182,20 +192,20 @@
             fillColor: femaleUnemploymentColor(feature.properties.Female_Unemployment_Rate_1940),
             strokeOpacity: 1.0,
             weight: 1.0,
-            fillOpacity: 0.7
+            fillOpacity: 0.5
           }
         },
         onEachFeature: function(feature, layer) {
-          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Female Unemployment Rate: " + feature.properties.Female_Unemployment_Rate_1940);
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Female Unemployment Rate: " + feature.properties.Female_Unemployment_Rate_1940 + "%");
           layer.on("mouseover", function() {
             this.setStyle({
-              'color': 'yellow',
+              'fillOpacity': 0.8,
               'weight': 2.0,
-            }).bringToFront();
+            });
           });
           layer.on("mouseout", function() {
             this.setStyle({
-              'color': 'grey',
+              'fillOpacity': 0.5,
               'weight': 1.0,
             });
           });
@@ -205,29 +215,156 @@
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const maleUnemployment = L.geoJson(counties, {
         style: function(feature) {
-          console.log(feature.properties);
           return {
             stroke: 1,
             color: 'grey',
             fillColor: maleUnemploymentColor(feature.properties.Male_Unemployment_Rate_1940),
             strokeOpacity: 1.0,
             weight: 1.0,
-            fillOpacity: 0.7
+            fillOpacity: 0.5
           }
         },
         onEachFeature: function(feature, layer) {
-          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Male Unemployment Rate: " + feature.properties.Male_Unemployment_Rate_1940);
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Male Unemployment Rate: " + feature.properties.Male_Unemployment_Rate_1940 + "%");
           layer.on("mouseover", function() {
             this.setStyle({
-              'color': 'yellow',
+              'fillOpacity': 0.8,
               'weight': 2.0,
-            }).bringToFront();
+            });
           });
           layer.on("mouseout", function() {
             this.setStyle({
-              'color': 'grey',
+              'fillOpacity': 0.5,
               'weight': 1.0,
             });
+          });
+        }
+      });
+
+      const youngAdultPop = L.geoJson(counties, {
+        style: function(feature) {
+          console.log(feature.properties);
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: nyaColor(feature.properties.Total_NYA_Pop_Perc_1940),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.5
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>NYA-Eligible Population: " + feature.properties.Total_NYA_Pop_Perc_1940 + "%");
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'fillOpacity': 0.8,
+              'weight': 2.0,
+            });
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'fillOpacity': 0.5,
+              'weight': 1.0,
+            });
+          });
+        }
+      });
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const participationRate = L.geoJson(participation, {
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: '#fd6a02', // set the fill color with a hexcode
+            color: '#fd6a02', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties['NYAT_YA%']*10
+          });
+        },
+        // for each feature...
+        onEachFeature: function(feature, layer) {
+          let props = layer.feature.properties;
+          let popUp = "<b>" + props.COUNTY_NAM + " County</b><hr>Young Adult NYA Particpation Rate: " + props['NYAT_YA%'].toFixed(2) + "%";
+          layer.bindPopup(popUp);
+          layer.on('mouseover', function() {
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
+            });
+            this.openPopup();
+          });
+          layer.on('mouseout', function() {
+            this.setStyle({
+              'fillColor': '#fd6a02',
+              'color': '#fd6a02'
+            });
+            this.closePopup();
+          });
+        }
+      });
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const participationWomen = L.geoJson(participation, {
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: '#a50f15', // set the fill color with a hexcode
+            color: '#a50f15', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties['NYAW_YW%']*10
+          });
+        },
+        // for each feature...
+        onEachFeature: function(feature, layer) {
+          let props = layer.feature.properties;
+          let popUp = "<b>" + props.COUNTY_NAM + " County</b><hr>Young Women NYA Particpation Rate: " + props['NYAW_YW%'].toFixed(2) + "%";
+          layer.bindPopup(popUp);
+          layer.on('mouseover', function() {
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
+            });
+            this.openPopup();
+          });
+          layer.on('mouseout', function() {
+            this.setStyle({
+              'fillColor': '#a50f15',
+              'color': '#a50f15'
+            });
+            this.closePopup();
+          });
+        }
+      });
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const participationMen = L.geoJson(participation, {
+        pointToLayer: function(feature, latlng) {
+          return L.circleMarker(latlng, {
+            fillColor: '#08519c', // set the fill color with a hexcode
+            color: '#08519c', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties['NYAM_YM%']*10
+          });
+        },
+        // for each feature...
+        onEachFeature: function(feature, layer) {
+          let props = layer.feature.properties;
+          let popUp = "<b>" + props.COUNTY_NAM + " County</b><hr>Young Men NYA Particpation Rate: " + props['NYAM_YM%'].toFixed(2) + "%";
+          layer.bindPopup(popUp);
+          layer.on('mouseover', function() {
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
+            });
+            this.openPopup();
+          });
+          layer.on('mouseout', function() {
+            this.setStyle({
+              'fillColor': '#08519c',
+              'color': '#08519c'
+            });
+            this.closePopup();
           });
         }
       });
@@ -237,10 +374,17 @@
         "Total Unemployment": unemployment,
         "Female Unemployment": femaleUnemployment,
         "Male Unemployment": maleUnemployment,
+        "Young Adult Population": youngAdultPop,
+      };
+
+      const overLays = {
+        "Young Adult NYA Particpation Rate": participationRate,
+        "Young Women NYA Participation Rate": participationWomen,
+        "Young Men NYA Participation Rate": participationMen,
       };
 
       // send the layers to the layer control
-      L.control.layers(controlLayers, null, {
+      L.control.layers(controlLayers, overLays, {
         collapsed: false,
         position: 'topright',
       }).addTo(map);
