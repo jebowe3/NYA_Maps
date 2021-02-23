@@ -83,7 +83,7 @@
     const mapOptions = {
       zoomSnap: 1, // set zoom increments
       center: [42.0751, -93.496], // center the map on Iowa
-      zoom: 8, // set the initial zoom
+      zoom: 7, // set the initial zoom
       minZoom: 5,
       maxZoom:11,
     };
@@ -478,9 +478,11 @@
         }
       ).addTo(map);
 
+      map.fitBounds(unemployment.getBounds());
+
     });
 
-    map.fitBounds(unemployment.getBounds());
+
 
   </script>
 </body>
