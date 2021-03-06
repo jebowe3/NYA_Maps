@@ -10,14 +10,6 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <!-- Path to the Leaflet opacity control plugin css file -->
   <link href="css/L.Control.Opacity.css" rel="stylesheet" />
-  <!--for icon support-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
-  <!-- for icon markers -->
-  <link rel="stylesheet" href="css/leaflet.extra-markers.min.css">
-  <!-- for grouped layer control -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-groupedlayercontrol/0.6.1/leaflet.groupedlayercontrol.css" integrity="sha512-PpKEvRG//V8hN9idekL4WOjknpMTPFH3MnWpVbVBmlzXpoUfbBSr054U/TUmOzUnCOM9PAPiLhRgq0i00B4q3w==" crossorigin="anonymous" />
   <!-- All the CSS code goes inside the style tags below -->
   <style>
     /* style the body */
@@ -32,7 +24,7 @@
       position: fixed;
       top: 10px;
       left: 10px;
-      width: 330px;
+      width: 278px;
       height: 50px;
       background-color: rgba(255, 255, 255, 0.7);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -51,17 +43,6 @@
       margin-right: 0;
       font-weight: bold;
       text-transform: uppercase;
-    }
-
-    h2 {
-      color: black;
-      font-size: 14px;
-      display: inline-block;
-      margin-top: 0.25em;
-      margin-bottom: 0.0em;
-      margin-left: 0.65em;
-      margin-right: 0;
-      font-weight: bold;
     }
 
     /* style the map */
@@ -86,7 +67,7 @@
 <body>
   <!-- header -->
   <header>
-    <h1>NYA and CCC Programs in Iowa</h1><br><h2>By Luke Borland</h2>
+    <h1>NYA Programs in Iowa: By Participation and Type</h1>
   </header>
   <!-- the map -->
   <div id="map"></div>
@@ -96,10 +77,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Path to the Leaflet opacity control plugin js file -->
   <script src="js/L.Control.Opacity.js"></script>
-  <!--for icon support-->
-  <script src="js/leaflet.extra-markers.min.js"></script>
-  <!-- for grouped layer control -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-groupedlayercontrol/0.6.1/leaflet.groupedlayercontrol.min.js" integrity="sha512-cdomNfv1IRJE1v+2/irZdkNU09XwtYP2bQ1qK1ybWF/vz+P3GTMZtrXwlxTU41ExwoWGvEf0njIak5l/ZQaIMA==" crossorigin="anonymous"></script>
   <!-- All JavaScript goes inside the script tags below -->
   <script>
     // define map options
@@ -135,10 +112,9 @@
     // use jquery to load GeoJSON data
     $.when(
       $.getJSON("data/NYA_Points.geojson"),
-      $.getJSON("data/CCC_Camps_Iowa.geojson"),
       // when the files are done loading,
       // identify them with names and process them through a function
-    ).done(function(nyaPoints, cccCamps) {
+    ).done(function(nyaPoints) {
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const workshop = L.geoJson(nyaPoints, {
@@ -146,38 +122,42 @@
           if (feature.properties.Proj_Class === "Workshop") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-hammer',
-              prefix: 'fa',
-              markerColor: 'green',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#6b8e23', // set the fill color with a hexcode
+            color: '#6b8e23', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
+          });
+          layer.on('mouseclick', function() {
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
+            });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#6b8e23',
+              'color': '#6b8e23'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const textiles = L.geoJson(nyaPoints, {
@@ -185,38 +165,35 @@
           if (feature.properties.Proj_Class === "Textiles") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-tshirt',
-              prefix: 'fa',
-              markerColor: 'blue',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#9F5F9F', // set the fill color with a hexcode
+            color: '#9F5F9F', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#9F5F9F',
+              'color': '#9F5F9F'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const construction = L.geoJson(nyaPoints, {
@@ -224,38 +201,35 @@
           if (feature.properties.Proj_Class === "Construction and Infrastructure") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-drafting-compass',
-              prefix: 'fa',
-              markerColor: 'orange',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#708598', // set the fill color with a hexcode
+            color: '#708598', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#708598',
+              'color': '#708598'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const clerical = L.geoJson(nyaPoints, {
@@ -263,38 +237,35 @@
           if (feature.properties.Proj_Class === "Clerical") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-scroll',
-              prefix: 'fa',
-              markerColor: 'purple',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#8a3324', // set the fill color with a hexcode
+            color: '#8a3324', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#8a3324',
+              'color': '#8a3324'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const other = L.geoJson(nyaPoints, {
@@ -302,38 +273,35 @@
           if (feature.properties.Proj_Class === "Other") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-question-circle',
-              prefix: 'fa',
-              markerColor: 'yellow',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#11593e', // set the fill color with a hexcode
+            color: '#11593e', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#11593e',
+              'color': '#11593e'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const education = L.geoJson(nyaPoints, {
@@ -341,38 +309,35 @@
           if (feature.properties.Proj_Class === "Education and Childcare") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-book',
-              prefix: 'fa',
-              markerColor: 'blue-dark',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#5c4e52', // set the fill color with a hexcode
+            color: '#5c4e52', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#5c4e52',
+              'color': '#5c4e52'
             });
-          })
+            this.closePopup();
+          });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const health = L.geoJson(nyaPoints, {
@@ -380,38 +345,35 @@
           if (feature.properties.Proj_Class === "Health and Nutrition") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-notes-medical',
-              prefix: 'fa',
-              markerColor: 'red',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#cc5e54', // set the fill color with a hexcode
+            color: '#cc5e54', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#cc5e54',
+              'color': '#cc5e54'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const recreation = L.geoJson(nyaPoints, {
@@ -419,38 +381,35 @@
           if (feature.properties.Proj_Class === "Recreation") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-swimming-pool',
-              prefix: 'fa',
-              markerColor: 'cyan',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#113b59', // set the fill color with a hexcode
+            color: '#113b59', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#113b59',
+              'color': '#113b59'
             });
+            this.closePopup();
           });
         }
-      }).addTo(map);
+      });
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const conservation = L.geoJson(nyaPoints, {
@@ -458,94 +417,59 @@
           if (feature.properties.Proj_Class === "Conservation") return true
         },
         pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fab fa-pagelines',
-              prefix: 'fa',
-              markerColor: 'orange-dark',
-              iconColor: 'white'
-            })
-          })
+          return L.circleMarker(latlng, {
+            fillColor: '#e0922b', // set the fill color with a hexcode
+            color: '#e0922b', // set the border color
+            weight: 1, // set the weight of the border
+            fillOpacity: 0.6, // set the opacity of the fill color
+            radius: feature.properties.Total/5
+          });
         },
         // for each feature...
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
           let popUp = "<b>" + props.City + "</b><hr>Co-Sponsor: " + props.Co_Sponsor + "<br>Project Type: " + props.Proj_Type + "<br>Men: " + props.Men + "<br>Women: " + props.Women + "<br>Total: " + props.Total;
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
+          layer.bindPopup(popUp);
           layer.on('mouseover', function() {
-            this.openPopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(2.0)';
-              layer.setZIndexOffset(1000);
+            this.setStyle({
+              'fillColor': 'yellow',
+              'color': 'yellow'
             });
+            this.openPopup();
           });
           layer.on('mouseout', function() {
-            this.closePopup();
-            layer.eachLayer(function(layer) {
-              layer._icon.style.filter = 'brightness(1.0)';
-              layer.setZIndexOffset(0);
+            this.setStyle({
+              'fillColor': '#e0922b',
+              'color': '#e0922b'
             });
-          });
-        }
-      }).addTo(map);
-
-      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
-      const civCorps = L.geoJson(cccCamps, {
-        pointToLayer: function(feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fas fa-tree',
-              prefix: 'fa',
-              markerColor: 'green-dark',
-              iconColor: 'white'
-            })
-          })
-        },
-        // for each feature...
-        onEachFeature: function(feature, layer) {
-          let props = layer.feature.properties;
-          let popUp = "<b>" + props["POST OFFICE"] + "</b><hr>Project: " + props["PROJECT"] + "<br>Co. #: " + props["CO. #"] + "<br>Date: " + props["DATE"];
-          layer.bindPopup(popUp, {
-            closeButton: false,
-          });
-          layer.on('mouseover', function(e) {
-            this.openPopup();
-            e.target._icon.style.filter = 'brightness(2.0)';
-            e.target.setZIndexOffset(1000);
-          });
-          layer.on('mouseout', function(e) {
             this.closePopup();
-            e.target._icon.style.filter = 'brightness(1.0)';
-            e.target.setZIndexOffset(0);
           });
         }
-      }).addTo(map);
+      });
+
+      const allLayers = L.layerGroup([conservation, recreation, health, education, other, clerical, construction, textiles, workshop]).addTo(map);
 
       // define layers for layer control
       const controlLayers = {
-        "NYA Projects": {
-          "Clerical": clerical,
-          "Conservation": conservation,
-          "Construction and Infrastructure": construction,
-          "Education and Childcare": education,
-          "Health and Nutrition": health,
-          "Recreation": recreation,
-          "Textiles": textiles,
-          "Workshop": workshop,
-          "Other": other
-        },
-        "CCC Projects": {
-          "CCC Camps": civCorps
-        }
+        "Clerical": clerical,
+        "Conservation": conservation,
+        "Construction and Infrastructure": construction,
+        "Education and Childcare": education,
+        "Health and Nutrition": health,
+        "Recreation": recreation,
+        "Textiles": textiles,
+        "Workshop": workshop,
+        "Other": other,
+        "All": allLayers
       };
 
       // send the layers to the layer control
-      L.control.groupedLayers(null, controlLayers, {
+      L.control.layers(controlLayers, null, {
         collapsed: false,
         position: 'topright',
       }).addTo(map);
+
+      $(".leaflet-control-layers-base").prepend("<b>Project Type</b>");
 
       // Give overlay layers a title for the opacity control
       const overMap = {
