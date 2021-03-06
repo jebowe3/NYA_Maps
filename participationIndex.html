@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Give the page a title -->
+  <title>NYA in Iowa</title>
+  <!-- Add a link to the Leaflet CSS library so you can reference it for styling your map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <!-- Path to the Leaflet opacity control plugin css file -->
+  <link href="css/L.Control.Opacity.css" rel="stylesheet" />
+  <!-- All the CSS code goes inside the style tags below -->
+  <style>
+    /* style the body */
+    body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* style header */
+    header {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 278px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      z-index: 800;
+    }
+
+    /* the text inputs */
+    h1 {
+      color: black;
+      font-size: 18px;
+      display: inline-block;
+      margin-top: 0.25em;
+      margin-bottom: 0.0em;
+      margin-left: 0.5em;
+      margin-right: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* style the map */
+    #map {
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      bottom: 0;
+    }
+
+    /* the zoom control */
+    .leaflet-top {
+      bottom: 0;
+    }
+
+    .leaflet-top .leaflet-control-zoom {
+      top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <h1>Iowa NYA Participation by County</h1>
+  </header>
+  <!-- the map -->
+  <div id="map"></div>
+  <!-- Add a link to the Leaflet JavaScript library so you can reference it for building your map -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <!-- Add a link to the jQuery JavaScript library so you can leverage ajax methods to load your data -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Path to the Leaflet opacity control plugin js file -->
+  <script src="js/L.Control.Opacity.js"></script>
+  <!-- All JavaScript goes inside the script tags below -->
+  <script>
+    // define map options
+    const mapOptions = {
+      zoomSnap: 0.5, // set zoom increments
+      center: [42.0751, -93.496], // center the map on Iowa
+      zoom: 7.5, // set the initial zoom
+      minZoom: 5,
+      maxZoom:11,
+    };
+
+    // define the map with the options above
+    const map = L.map("map", mapOptions);
+
+    // add a base map to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    	maxZoom: 19,
+    	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+    }).addTo(map);
+
+    // Overlay layers (TMS)
+    const stateParks1930s = L.tileLayer('./{z}/{x}/{y}.png', {
+      tms: true,
+      minZoom: 5,
+      maxZoom: 11,
+    }).addTo(map);
+
+    // Add a scale bar
+    L.control.scale({
+      position: 'bottomleft' // Position the scale bar at the bottom-right corner
+    }).addTo(map);
+
+    function participationColor(d) {
+      return d > 4.21 ? '#253494' :
+        d > 2.95 ? '#2c7fb8' :
+        d > 1.78 ? '#41b6c4' :
+        d > 0.75 ? '#a1dab4' :
+        d >= 0 ? '#ffffcc' :
+        '#1C00ff00';
+    };
+
+    // use jquery to load GeoJSON data
+    $.when(
+      //$.getJSON("data/County.geojson"),
+      $.getJSON("data/NYA_Participation.geojson")
+      // when the files are done loading,
+      // identify them with names and process them through a function
+    ).done(function(participation) {
+
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const participationRate = L.geoJson(participation, {
+        style: function(feature) {
+          return {
+            stroke: 1,
+            color: 'grey',
+            fillColor: participationColor(feature.properties["NYAT_YA%"]),
+            strokeOpacity: 1.0,
+            weight: 1.0,
+            fillOpacity: 0.5
+          }
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindTooltip("<b>" + feature.properties.COUNTY_NAM + " County</b><br>Rate of NYA Participation by NYA-Eligible Population: " + feature.properties["NYAT_YA%"].toFixed(2) + "%");
+          layer.on("mouseover", function() {
+            this.setStyle({
+              'fillOpacity': 0.8,
+              'weight': 2.0,
+            });
+          });
+          layer.on("mouseout", function() {
+            this.setStyle({
+              'fillOpacity': 0.5,
+              'weight': 1.0,
+            });
+          });
+        }
+      }).addTo(map);
+
+      // define layers for layer control
+      const overLays = {
+        "Young Adult NYA Particpation Rate": participationRate,
+      };
+
+      // send the layers to the layer control
+      L.control.layers(null, overLays, {
+        collapsed: false,
+        position: 'topright',
+      }).addTo(map);
+
+      //$(".leaflet-control-layers-base").prepend("<b>Socioeconomic Data, 1940</b>");
+
+      // Give overlay layers a title for the opacity control
+      const overMap = {
+        "Iowa State Plan, 1930s": stateParks1930s
+      };
+
+      // The opacity control
+      L.control.opacity(
+        overMap, {
+          label: "<b>Map Transparency</b>" // Give the control a title
+        }
+      ).addTo(map);
+
+      //map.fitBounds(unemployment.getBounds());
+
+    });
+
+
+
+  </script>
+</body>
+
+</html>
