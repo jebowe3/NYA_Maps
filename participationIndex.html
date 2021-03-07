@@ -186,15 +186,15 @@
           return L.piechartMarker(latlng, {
             radius: getRadius(feature.properties.Total),
             data: [
-              { name: 'Clerical', value: feature.properties["Clerical"], style: { fillStyle: 'rgba(75,0,130,0.6)', strokeStyle: 'rgba(75,0,130,0.95)', lineWidth: 1 } },
-              { name: 'Conservation', value: feature.properties["Conservation"], style: { fillStyle: 'rgba(255,69,0,0.6)', strokeStyle: 'rgba(255,69,0,0.95)', lineWidth: 1 } },
-              { name: 'Construction and Infrastructure', value: feature.properties["Construction and Infrastructure"], style: { fillStyle: 'rgba(255,165,0,0.6)', strokeStyle: 'rgba(255,165,0,0.95)', lineWidth: 1 } },
-              { name: 'Education and Childcare', value: feature.properties["Education and Childcare"], style: { fillStyle: 'rgba(0,139,139,0.6)', strokeStyle: 'rgba(0,139,139,0.95)', lineWidth: 1 } },
-              { name: 'Health and Nutrition', value: feature.properties["Health and Nutrition"], style: { fillStyle: 'rgba(255,0,0,0.6)', strokeStyle: 'rgba(255,0,0,0.95)', lineWidth: 1 } },
-              { name: 'Recreation', value: feature.properties["Recreation"], style: { fillStyle: 'rgba(0,255,255,0.6)', strokeStyle: 'rgba(0,255,255,0.95)', lineWidth: 1 } },
-              { name: 'Textiles', value: feature.properties["Textiles"], style: { fillStyle: 'rgba(0,0,255,0.6)', strokeStyle: 'rgba(0,0,255,0.95)', lineWidth: 1 } },
-              { name: 'Workshop', value: feature.properties["Workshop"], style: { fillStyle: 'rgba(0,128,0,0.6)', strokeStyle: 'rgba(0,128,0,0.95)', lineWidth: 1 } },
-              { name: 'Other', value: feature.properties["Other"], style: { fillStyle: 'rgba(255,255,0,0.6)', strokeStyle: 'rgba(255,255,0,0.95)', lineWidth: 1 } }
+              { name: 'Clerical', value: feature.properties["Clerical"], style: { fillStyle: 'rgba(75,0,130,0.6)', strokeStyle: 'rgba(75,0,130,0.6)', lineWidth: 1 } },
+              { name: 'Conservation', value: feature.properties["Conservation"], style: { fillStyle: 'rgba(255,69,0,0.6)', strokeStyle: 'rgba(255,69,0,0.6)', lineWidth: 1 } },
+              { name: 'Construction and Infrastructure', value: feature.properties["Construction and Infrastructure"], style: { fillStyle: 'rgba(255,165,0,0.6)', strokeStyle: 'rgba(255,165,0,0.6)', lineWidth: 1 } },
+              { name: 'Education and Childcare', value: feature.properties["Education and Childcare"], style: { fillStyle: 'rgba(0,139,139,0.6)', strokeStyle: 'rgba(0,139,139,0.6)', lineWidth: 1 } },
+              { name: 'Health and Nutrition', value: feature.properties["Health and Nutrition"], style: { fillStyle: 'rgba(255,0,0,0.6)', strokeStyle: 'rgba(255,0,0,0.6)', lineWidth: 1 } },
+              { name: 'Recreation', value: feature.properties["Recreation"], style: { fillStyle: 'rgba(0,255,255,0.6)', strokeStyle: 'rgba(0,255,255,0.6)', lineWidth: 1 } },
+              { name: 'Textiles', value: feature.properties["Textiles"], style: { fillStyle: 'rgba(0,0,255,0.6)', strokeStyle: 'rgba(0,0,255,0.6)', lineWidth: 1 } },
+              { name: 'Workshop', value: feature.properties["Workshop"], style: { fillStyle: 'rgba(0,128,0,0.6)', strokeStyle: 'rgba(0,128,0,0.6)', lineWidth: 1 } },
+              { name: 'Other', value: feature.properties["Other"], style: { fillStyle: 'rgba(255,255,0,0.6)', strokeStyle: 'rgba(255,255,0,0.6)', lineWidth: 1 } }
             ]
           });
         },
@@ -211,27 +211,26 @@
                       "<br>Workshop: " + props["Workshop"] + "; " + (props["Workshop"]/props["Total"]*100).toFixed(2) + "%" +
                       "<br>Other: " + props["Other"] + "; " + (props["Other"]/props["Total"]*100).toFixed(2) + "%";
 */        let div = $('<div id="info"><b>' + props["COUNTY_NAM"] + " County" + '</b><hr>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(75,0,130)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,69,0)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,165,0)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,139,139)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,0,0)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,255,255)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,0,255)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,128,0)" /></svg></p>' +
-                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,255,0)" /></svg></p>' +'</div>')[0];
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(75,0,130)" /></svg><span>' + " Clerical: " + props["Clerical"] + "; " + (props["Clerical"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,69,0)" /></svg><span>' + " Conservation: " + props["Conservation"] + "; " + (props["Conservation"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,165,0)" /></svg><span>' + " Construction and Infrastructure: " + props["Construction and Infrastructure"] + "; " + (props["Construction and Infrastructure"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,139,139)" /></svg><span>' + " Education and Childcare: " + props["Education and Childcare"] + "; " + (props["Education and Childcare"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,0,0)" /></svg><span>' + " Health and Nutrition: " + props["Health and Nutrition"] + "; " + (props["Health and Nutrition"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,255,255)" /></svg><span>' + " Recreation: " + props["Recreation"] + "; " + (props["Recreation"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,0,255)" /></svg><span>' + " Textiles: " + props["Textiles"] + "; " + (props["Textiles"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,128,0)" /></svg><span>' + " Workshop: " + props["Workshop"] + "; " + (props["Workshop"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,255,0)" /></svg><span>' + " Other: " + props["Other"] + "; " + (props["Other"]/props["Total"]*100).toFixed(2) + "%" + '</span></p>' +'</div>')[0];
           let popUp = L.tooltip().setContent(div);
           layer.bindTooltip(popUp, {
-            closeButton: false,
+            offset: L.point({x: getRadius(feature.properties.Total), y: 0}),
+            direction: 'right',
           });
-          /*
           layer.on('mouseover', function() {
-            this.openPopup();
+            this._icon.style.filter = 'brightness(1.2)';
           });
           layer.on('mouseout', function() {
-            this.closePopup();
+            this._icon.style.filter = 'brightness(1.0)';
           });
-          */
         }
       }).addTo(map);
 
