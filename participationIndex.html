@@ -193,6 +193,27 @@
               { name: 'Other', value: feature.properties["Other"], style: { fillStyle: 'rgba(255,255,0,0.6)', strokeStyle: 'rgba(255,255,0,0.95)', lineWidth: 1 } }
             ]
           });
+        },
+        onEachFeature: function(feature, layer) {
+          let props = layer.feature.properties;
+          let popUp = "<b>" + props["COUNTY_NAM"] + " County</b><hr>Clerical: " + props["Clerical"] + "; " + (props["Clerical"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Conservation: " + props["Conservation"] + "; " + (props["Conservation"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Construction and Infrastructure: " + props["Construction and Infrastructure"] + "; " + (props["Construction and Infrastructure"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Education and Childcare: " + props["Education and Childcare"] + "; " + (props["Education and Childcare"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Health and Nutrition: " + props["Health and Nutrition"] + "; " + (props["Health and Nutrition"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Recreation: " + props["Recreation"] + "; " + (props["Recreation"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Textiles: " + props["Textiles"] + "; " + (props["Textiles"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Workshop: " + props["Workshop"] + "; " + (props["Workshop"]/props["Total"]*100).toFixed(2) + "%" +
+                      "<br>Other: " + props["Other"] + "; " + (props["Other"]/props["Total"]*100).toFixed(2) + "%";
+          layer.bindPopup(popUp, {
+            closeButton: false,
+          });
+          layer.on('mouseover', function() {
+            this.openPopup();
+          });
+          layer.on('mouseout', function() {
+            this.closePopup();
+          });
         }
       }).addTo(map);
 
