@@ -77,13 +77,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Path to the Leaflet opacity control plugin js file -->
   <script src="js/L.Control.Opacity.js"></script>
+  <!-- Leaflet Piechart -->
+  <script src="http://sashakavun.github.io/leaflet-canvasicon/leaflet-canvasicon.js"></script>
+  <script src="js/leaflet-piechart.js"></script>
   <!-- All JavaScript goes inside the script tags below -->
   <script>
     // define map options
     const mapOptions = {
-      zoomSnap: 0.5, // set zoom increments
+      zoomSnap: 1, // set zoom increments
       center: [42.0751, -93.496], // center the map on Iowa
-      zoom: 7.5, // set the initial zoom
+      zoom: 8, // set the initial zoom
       minZoom: 5,
       maxZoom:11,
     };
@@ -118,13 +121,20 @@
         '#1C00ff00';
     };
 
+    function getRadius(d) {
+      var scaleFactor = 5;
+		  var area = d * scaleFactor;
+		  return Math.sqrt(area/Math.PI)*2;
+    };
+
     // use jquery to load GeoJSON data
     $.when(
       //$.getJSON("data/County.geojson"),
-      $.getJSON("data/NYA_Participation.geojson")
+      $.getJSON("data/NYA_Participation.geojson"),
+      $.getJSON("data/Participation_by_Project.geojson")
       // when the files are done loading,
       // identify them with names and process them through a function
-    ).done(function(participation) {
+    ).done(function(participation, project) {
 
       // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
       const participationRate = L.geoJson(participation, {
@@ -155,9 +165,30 @@
         }
       }).addTo(map);
 
+      // initiate a leaflet GeoJSON layer with L.geoJson, feed it the data, and add to the map
+      const projects = L.geoJson(project, {
+        pointToLayer: function(feature, latlng) {
+          return L.piechartMarker(latlng, {
+            radius: getRadius(feature.properties.Total),
+            data: [
+              { name: 'Clerical', value: feature.properties["Clerical"], style: { fillStyle: 'rgba(75,0,130,0.6)', strokeStyle: 'rgba(75,0,130,0.95)', lineWidth: 1 } },
+              { name: 'Conservation', value: feature.properties["Conservation"], style: { fillStyle: 'rgba(255,69,0,0.6)', strokeStyle: 'rgba(255,69,0,0.95)', lineWidth: 1 } },
+              { name: 'Construction and Infrastructure', value: feature.properties["Construction and Infrastructure"], style: { fillStyle: 'rgba(255,165,0,0.6)', strokeStyle: 'rgba(255,165,0,0.95)', lineWidth: 1 } },
+              { name: 'Education and Childcare', value: feature.properties["Education and Childcare"], style: { fillStyle: 'rgba(0,139,139,0.6)', strokeStyle: 'rgba(0,139,139,0.95)', lineWidth: 1 } },
+              { name: 'Health and Nutrition', value: feature.properties["Health and Nutrition"], style: { fillStyle: 'rgba(255,0,0,0.6)', strokeStyle: 'rgba(255,0,0,0.95)', lineWidth: 1 } },
+              { name: 'Recreation', value: feature.properties["Recreation"], style: { fillStyle: 'rgba(0,255,255,0.6)', strokeStyle: 'rgba(0,255,255,0.95)', lineWidth: 1 } },
+              { name: 'Textiles', value: feature.properties["Textiles"], style: { fillStyle: 'rgba(0,0,255,0.6)', strokeStyle: 'rgba(0,0,255,0.95)', lineWidth: 1 } },
+              { name: 'Workshop', value: feature.properties["Workshop"], style: { fillStyle: 'rgba(0,128,0,0.6)', strokeStyle: 'rgba(0,128,0,0.95)', lineWidth: 1 } },
+              { name: 'Other', value: feature.properties["Other"], style: { fillStyle: 'rgba(255,255,0,0.6)', strokeStyle: 'rgba(255,255,0,0.95)', lineWidth: 1 } }
+            ]
+          });
+        }
+      }).addTo(map);
+
       // define layers for layer control
       const overLays = {
         "Young Adult NYA Particpation Rate": participationRate,
+        "Participation by Project Type": projects
       };
 
       // send the layers to the layer control

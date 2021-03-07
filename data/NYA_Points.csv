@@ -1,0 +1,383 @@
+Congress,County,City,Proj_Type,Co_Sponsor,Men,Women,Total,Lat,Long,Dup_Code,Place,ID,Proj_Class
+Ninth,Sioux,"Alton, Orange City",Library Service,Library Board,0,4,4,43.0072424,-96.0583138,41,Orange City,363,Education and Childcare
+Ninth,Osceola,"Melvin, Ocheyedan",Hot School Lunches,Board of Education and Public School,0,4,4,43.2874718,-95.609178,40,Melvin,347,Health and Nutrition
+Ninth,O'Brien,"Sheldon, Sutherland",Library Service,"Library Board, Public Library",0,4,4,42.9741435,-95.4975058,39,Sutherland,382,Education and Childcare
+Ninth,O'Brien,"Sanborn, Sheldon, Sutherland",Hot School Lunches,Public Schools,0,6,6,42.9741435,-95.4975058,38,Sutherland,345,Health and Nutrition
+Ninth,O'Brien,"Primghar, Sheldon",Clerical Assistance,"Board of Education, County Farm Bureau, County Welfare Board, City",0,7,7,43.1810844,-95.8561126,37,Sheldon,344,Clerical
+Ninth,Cherokee,"Cleghorn, Meriden",Hot School Lunches,Consolidated School,0,5,5,42.794706,-95.6344537,36,Meriden,327,Health and Nutrition
+Ninth,Buena Vista,"Alta, Linn Grove, Storm Lake",Library Service,Public Library Boards,1,3,4,42.6453271,-95.1992916,35,Storm Lake,319,Education and Childcare
+Eighth,Kossuth,"Burt, Wesley",Library Service,Boards of Education,0,7,7,43.0882981,-93.9902312,34,Wesley,303,Education and Childcare
+Eighth,Hancock,"Corwith, Garner",Library Service,"Board of Education, City Library Board",0,9,9,42.9931986,-93.9575024,33,Corwith,297,Education and Childcare
+Eighth,Hancock,"Britt, Garner",Clerical Assistance,County Board of Supervisors,0,7,7,43.1024603,-93.6018782,32,Garner,296,Clerical
+Seventh,Taylor,"Blockton, Lenox, New Market, Shambaugh",Recreational Leadership,County Superintendent of Schools Office,0,2,2,40.6588798,-95.0319224,31,Shambaugh,275,Recreation
+Seventh,Pottawattamie,"Council Bluffs, Oakland",Clerical Assistance,"County Relief Office, State Employment Service, County Auditor, City, Old Age Assistance Office, County Recorder, Sheriff's Office, County Farm Bureau, Farm Security Administration",0,34,34,41.3091596,-95.3966671,30,Oakland,266,Clerical
+Seventh,Page,"Clarinda, Shenandoah",Clerical Assistance,"County Farm Bureau, Old Age Assistance Office, County Relief Office, County Recorder, State Employment Service, Farm Security Administration",1,12,13,40.7655528,-95.3722103,29,Shenandoah,257,Clerical
+Seventh,Montgomery,"Red Oak, Villisca",Library Service,Public Library,0,6,6,40.9297115,-94.9760928,28,Villisca,255,Education and Childcare
+Seventh,Mills,"Glenwood, Malvern",Clerical Assistance,"City, County Farm Bureau",1,4,5,41.002776,-95.585278,27,Malvern,252,Clerical
+Seventh,Harrison,"Missouri Valley, Modale",Library Service,"Consolidated School, Public Library",0,6,6,41.6197132,-96.0119563,26,Modale,247,Education and Childcare
+Seventh,Harrison,"Logan, Missouri Valley",Clerical Assistance,"County Welfare Board, Farm Bureau, Farm Security Administration",5,5,10,41.556381,-95.8877881,25,Missouri Valley,244,Clerical
+Seventh,Fremont,"Hamburg, Sidney",Library Assistance,Public Library,1,1,2,40.7473867,-95.6468803,24,Sidney,239,Education and Childcare
+Seventh,Cass,"Cumberland, Massena",Library Service,"Public School, Public Library",0,3,3,41.253889,-94.768889,23,Massena,238,Education and Childcare
+Seventh,Cass,"Anita, Cumberland, Massena",Recreational Leadership,County Superintendent of Schools,0,5,5,41.2541538,-94.7683113,22,Massena,233,Recreation
+Seventh,Adams,"Corning, Prescott",Hot School Lunches,High School,0,5,5,41.0225,-94.6125,21,Prescott,230,Health and Nutrition
+Sixth,Story,"Ames, Nevada",Clerical Assistance,"Farm Security Administration, State Extension Service, State Employment Service, City, Iowa State College, County Board of Supervisors",0,33,33,42.019167,-93.451667,20,Nevada,224,Clerical
+Sixth,Polk,"Ankeny, Des Moines",Hot School Lunches,School Board and School District,0,25,25,41.5910323,-93.6046655,19,Des Moines,207,Health and Nutrition
+Sixth,Marion,"Knoxville, Melcher, Pella",Clerical Assistance,"County Board of Supervisors, Farm Security Administration",2,12,14,41.4080534,-92.9163091,18,Pella,200,Clerical
+Sixth,Marion,"Hamilton, Pershing",Hot School Lunches,"School District, Board of Education",5,9,14,41.262698,-93.007343,17,Pershing,199,Health and Nutrition
+Sixth,Dallas,"Adel, Dawson, Granger, Perry, Van Meter",Library Service,"Public School, Public Library",0,9,9,41.8386702,-94.1067623,16,Perry,193,Education and Childcare
+Sixth,Dallas,"Adel, Waukee",Hot School Lunches,"Public School, Consolidated School",0,6,6,41.608889,-93.865278,15,Waukee,192,Health and Nutrition
+Sixth,Dallas,"Adel, Perry",Clerical Assistance,"Farm Bureau, County Superintedent of Schools, State Employment Service, Board of Social Welfare",2,9,11,41.8386702,-94.1067623,14,Perry,190,Clerical
+Fifth,Monroe,"Albia, Lovilia",Clerical Assistance,"State Employment Service, Farm Security Administration, County Agent, Agriculture Adjustment Administration, Department of Health, City, Social Welfare.",1,23,24,41.1358371,-92.9040881,13,Lovilia,164,Clerical
+Fifth,Jasper,"Colfax, Newton",Library Service,"Library Board, Public Library",0,8,8,41.6777666,-93.245205,12,Colfax,145,Education and Childcare
+Fifth,Appanoose,"Jerome, Mystic, Numa",Hot School Lunches,"High School, Board of Education",3,20,23,40.685556,-92.978611,11,Numa,133,Health and Nutrition
+Fifth,Appanoose,"Cincinnati, Udell",Library Service,Board of Education,0,7,7,40.780278,-92.741389,10,Udell,131,Education and Childcare
+Fourth,Winneshiek,"Decorah, Ossian",Clerical Assistance,"State Employment Service, County Board of Supervisors, County Nurse, Welfare Office, Farm Security Administration, County Farm Bureau, Public Schools",0,6,6,43.146389,-91.763889,9,Ossian,124,Clerical
+Fourth,Floyd,"Charles City, Nora Springs",Library Service,Board of Education,2,17,19,43.143889,-93.008889,8,Nora Springs,117,Education and Childcare
+Fourth,Fayette,"Fayette, Oelwein, West Union",Clerical Assistance,"County Board of Supervisors, State Employment Service, County Superintendent of Schools, Farm Security Administration",0,10,10,42.9627837,-91.808219,7,West Union,106,Clerical
+Fourth,Clayton,"Elkader, Guttenberg, McGregor",Clerical Assistance,"State Employment Service, County Board of Supervisors, U.S. Fish Hatchary, United States Soil Conservation Service",0,7,7,43.0184865,-91.1825165,6,McGregor,99,Clerical
+Fourth,Allamakee,"Lansing, Waukon",Clerical Assistance,"City, County Board of Supervisors, County Nurse",0,2,2,43.361389,-91.223333,5,Lansing,83,Clerical
+Third,Wright,"Clarion, Eagle Grove",Clerical Assistance,"State Employment Service, City, Farm Security Administration, State Agriculture Extension Service",0,18,18,42.664138,-93.9043905,4,Eagle Grove,79,Clerical
+Third,Butler,"Aplington, Greene, Parkersburg",Library Service,Board of Education,0,7,7,42.5740738,-92.7819013,3,Parkersburg,62,Education and Childcare
+Third,Black Hawk,"Hudson, Waterloo",Library Service,City,0,5,5,42.408889,-92.452222,2,Hudson,55,Education and Childcare
+Third,Black Hawk,"Cedar Falls, Waterloo",Clerical Assistance,"City, State Employment Service, County Auditor",1,37,38,42.4979693,-92.3329637,1,Waterloo,54,Clerical
+First,Des Moines,Burlington,Sewing Room,City,0,38,38,40.8075391,-91.1129234,0,Burlington,1,Textiles
+First,Des Moines,Burlington,Workshop,City,150,45,195,40.8075391,-91.1129234,0,Burlington,2,Workshop
+First,Des Moines,Burlington,Clerical Assistance,"City, County Health Nures, County Farm Bureau, State Employment Service",2,18,20,40.8075391,-91.1129234,0,Burlington,3,Clerical
+First,Des Moines,Sperry,Hot School Lunches,Board of Education,0,4,4,40.9577342,-91.15874,0,Sperry,4,Health and Nutrition
+First,Henry,Mount Pleasant,Repairing State Hospital,State Hospital,66,0,66,40.966312,-91.5539956,0,Mount Pleasant,5,Construction and Infrastructure
+First,Henry,Mount Pleasant,Clerical Assistance,"County Board of Supervisors, Farm Security Administration, County Farm Bureau",3,18,21,40.966312,-91.5539956,0,Mount Pleasant,6,Clerical
+First,Henry,Mount Pleasant,Hospital Assistance,State Hospital,0,7,7,40.966312,-91.5539956,0,Mount Pleasant,7,Health and Nutrition
+First,Iowa,Marengo,Clerical Assistance,State Employment Service,0,2,2,41.8001041,-92.069382,0,Marengo,8,Clerical
+First,Jefferson,Fairfield,Laying Water Lines,City,50,0,50,41.0087364,-91.9626486,0,Fairfield,9,Construction and Infrastructure
+First,Jefferson,Fairfield,Clerical Assistance,"City, Farm Credit Association, Farm Security Administration, County Farm Bureau, Board of Education",0,6,6,41.0087364,-91.9626486,0,Fairfield,10,Clerical
+First,Jefferson,Fairfield,Library Service,"City, Board of Education",0,12,12,41.0087364,-91.9626486,0,Fairfield,11,Education and Childcare
+First,Jefferson,Fairfield,Constructing Social & Recreational Building,City Park Board,27,0,27,41.0087364,-91.9626486,0,Fairfield,12,Construction and Infrastructure
+First,Jefferson,Packwood,Construcing City Hall,City,30,0,30,41.1328058,-92.0827361,0,Packwood,13,Construction and Infrastructure
+First,Johnson,Iowa City,Workshop,University of Iowa,25,18,43,41.6612561,-91.5299106,0,Iowa City,14,Workshop
+First,Johnson,Iowa City,Hospital Assistance,University of Iowa,5,7,12,41.6612561,-91.5299106,0,Iowa City,15,Health and Nutrition
+First,Johnson,Iowa City,Working in Visual Aid Department,University of Iowa,6,4,10,41.6612561,-91.5299106,0,Iowa City,16,Workshop
+First,Johnson,Iowa City,Clerical Assistance,University of Iowa,0,2,2,41.6612561,-91.5299106,0,Iowa City,17,Clerical
+First,Lee,Denmark,Repairing the Grounds,Board of Education,28,0,28,40.7420887,-91.3341582,0,Denmark,18,Construction and Infrastructure
+First,Lee,Denmark,Hot School Lunches,Board of Education,0,2,2,40.7420887,-91.3341582,0,Denmark,19,Health and Nutrition
+First,Lee,Fort Madison,Constructing Educational Buildings,Board of Education,60,0,60,40.6299403,-91.3151908,0,Fort Madison,20,Construction and Infrastructure
+First,Lee,Fort Madison,Clerical,Farm Security Administration,3,0,3,40.6299403,-91.3151908,0,Fort Madison,21,Clerical
+First,Lee,Keokuk,Improving Parks,City,41,0,41,41.3154792,-92.1867128,0,Keokuk,22,Construction and Infrastructure
+First,Lee,Keokuk,Enlarging Cemetery,City,16,0,16,41.3154792,-92.1867128,0,Keokuk,23,Construction and Infrastructure
+First,Louisa,Wapello,Clerical Assistance,County Farm Bureau,0,1,1,41.0137597,-92.4140217,0,Wapello,24,Clerical
+First,Louisa,Wapello,Constructing Cattle Barn at Fairground,City,31,0,31,41.0137597,-92.4140217,0,Wapello,25,Construction and Infrastructure
+First,Muscatine,Muscatine,Sewing Room,City,0,84,84,41.4776121,-91.1210053,0,Muscatine,26,Textiles
+First,Muscatine,Muscatine,Constructing Shelter & Pumphouse in Wildcat Den State Park,State Conservation Comission,30,0,30,41.4776121,-91.1210053,0,Muscatine,27,Construction and Infrastructure
+First,Muscatine,Muscatine,Workshop,City,38,1,39,41.4776121,-91.1210053,0,Muscatine,28,Workshop
+First,Van Buren,Farmington,Workshop,City,34,26,60,40.6409932,-91.739112,0,Farmington,29,Workshop
+First,Van Buren,Keosauqua,Clerical Assistance,State Employment Service,0,5,5,40.731485,-91.9636373,0,Keosauqua,30,Clerical
+First,Washington,Washington,Street Improvement,City,46,0,46,41.3160082,-91.7340327,0,Washington,31,Construction and Infrastructure
+Second,Clinton,Clinton,Sewing Room,County Board of Supervisors,0,57,57,41.9054695,-90.5599971,0,Clinton,32,Textiles
+Second,Clinton,Clinton,Workshop,County Board of Supervisors,77,0,77,41.9054695,-90.5599971,0,Clinton,33,Workshop
+Second,Dubuque,Dubuque,Constructing Log Cabin,Park Board,30,0,30,42.5006217,-90.6647967,0,Dubuque,34,Construction and Infrastructure
+Second,Dubuque,Dubuque,Workshop,County Board of Supervisors,167,0,167,42.5006217,-90.6647967,0,Dubuque,35,Workshop
+Second,Dubuque,Dubuque,Sewing Room,County Board of Supervisors,0,217,217,42.5006217,-90.6647967,0,Dubuque,36,Textiles
+Second,Dubuque,Dubuque,Recreational Leadership,County Board of Supervisors,7,10,17,42.5006217,-90.6647967,0,Dubuque,37,Recreation
+Second,Jackson,Maquoketa,Woodworking Shop,County Board of Supervisors,33,0,33,42.069102,-90.6656659,0,Maquoketa,38,Workshop
+Second,Jackson,Maquoketa,Conservation Work in Maquokata Caves State Park,State Conservation Commission,22,0,22,42.069102,-90.6656659,0,Maquoketa,39,Conservation
+Second,Jackson,Sabula,Conservation Work at Fish Hatchery,State Conservation Commission,8,0,8,42.0711161,-90.1740278,0,Sabula,40,Conservation
+Second,Jones,Monticello,Park Improvement,City,55,1,56,42.2382752,-91.1869428,0,Monticello,41,Construction and Infrastructure
+Second,Linn,Cedar Rapids,Sewing Room,City,6,4,10,41.9758872,-91.6704053,0,Cedar Rapids,42,Textiles
+Second,Linn,Cedar Rapids,Clerical Assistance,"State Employment Service, Farm Security Administration, County Farm Bureau, Reserve Officers Association, R.E.A",1,91,92,41.9758872,-91.6704053,0,Cedar Rapids,43,Clerical
+Second,Linn,Cedar Rapids,Sewing Room,City,0,13,13,41.9758872,-91.6704053,0,Cedar Rapids,44,Textiles
+Second,Linn,Marion,Workshop,City,145,0,145,41.3144108,-93.1010141,0,Marion,45,Workshop
+Second,Scott,Davenport,Workshop,County Board of Supervisors,50,0,50,41.5236436,-90.5776368,0,Davenport,46,Workshop
+Second,Scott,Davenport,Sewing Room,County Board of Supervisors,0,104,104,41.5236436,-90.5776368,0,Davenport,47,Textiles
+Second,Scott,Davenport,Clerical Assistance,State Employment Service,0,3,3,41.5236436,-90.5776368,0,Davenport,48,Clerical
+Second,Scott,Davenport,Improving City Cemetery,City,64,0,64,41.5236436,-90.5776368,0,Davenport,49,Construction and Infrastructure
+Second,Scott,Rock Island,NYA Workshop,United States Army,131,63,194,41.5094771,-90.5787477,0,Rock Island,50,Workshop
+Third,Benton,Belle Plaine,Clerical Assistance,City,0,5,5,41.8967478,-92.2773184,0,Belle Plaine,51,Clerical
+Third,Benton,Belle Plaine,Workshop,City,31,0,31,41.8967478,-92.2773184,0,Belle Plaine,52,Workshop
+Third,Benton,Vinton,Sewing Room,City,0,19,19,42.1662438,-92.021343,0,Vinton,53,Textiles
+Third,Black Hawk,Waterloo,Workshop,County,92,0,92,42.4979693,-92.3329637,0,Waterloo,56,Workshop
+Third,Black Hawk,Waterloo,Reparing 9 Skating Rinks,City,15,0,15,42.4979693,-92.3329637,0,Waterloo,57,Construction and Infrastructure
+Third,Black Hawk,Waterloo,Sewing Room,City,0,128,128,42.4979693,-92.3329637,0,Waterloo,58,Textiles
+Third,Bremer,Waverly,Library Service,City,0,1,1,42.7258142,-92.4754626,0,Waverly,59,Education and Childcare
+Third,Bremer,Waverly,Clerical Assistance,"State Employment Service, County Board of Supervisors, Farm Security Administration, County Agent",1,9,10,42.7258142,-92.4754626,0,Waverly,60,Clerical
+Third,Butler,Allison,Rural Electrification Work,Butler County Co-operative,5,0,5,42.7527548,-92.7951945,0,Allison,61,Construction and Infrastructure
+Third,Butler,Clarksville,Park Improvement,State Conservation Commission,11,0,11,42.7766355,-92.66791089,0,Clarksville,63,Construction and Infrastructure
+Third,Butler,Parkersburg,Clerical Assistance,"State Employment Service, County Board of Supervisors, Farm Security Administration, County Agent",0,1,1,42.5740738,-92.7819013,0,Parkersburg,64,Clerical
+Third,Franklin,Geneva,Library Service,Board of Education,0,2,2,42.6749401,-93.1303862,0,Geneva,65,Education and Childcare
+Third,Franklin,Hampton,Rural Electrification Work,Federal Cooperative Power Association,10,0,10,42.7420086,-93.2022735,0,Hampton,66,Construction and Infrastructure
+Third,Franklin,Hampton,Park Improvement,State Conservation Commission,30,0,30,42.7420086,-93.2022735,0,Hampton,67,Construction and Infrastructure
+Third,Franklin,Hampton,Clerical Assistance,"State Employment Service, County Board of Supervisors, State Agriculture Extension Service",0,6,6,42.7420086,-93.2022735,0,Hampton,68,Clerical
+Third,Hardin,Eldora,Workshop,City,72,0,72,42.360816,-93.0996464,0,Eldora,69,Workshop
+Third,Hardin,Eldora,Constructing Stream Improvement Devices,State Conservation Commission,14,0,14,42.360816,-93.0996464,0,Eldora,70,Construction and Infrastructure
+Third,Hardin,Eldora,Clerical Assistance,"City, County Farm Bureau, County Welfare Office, County Superintendent of Schools",0,6,6,42.360816,-93.0996464,0,Eldora,71,Clerical
+Third,Hardin,Iowa Falls,Hospitial Assistance,City,0,8,8,42.5210019,-93.2636705,0,Iowa Falls,72,Health and Nutrition
+Third,Marshall,Marshalltown,Park Improvement,City,49,0,49,42.0442545,-92.9123388,0,Marshalltown,73,Construction and Infrastructure
+Third,Marshall,Marshalltown,Clerical Assistance,"State Employment Service, County Relief Office, Public Library, County Tresurer",1,8,9,42.0442545,-92.9123388,0,Marshalltown,74,Clerical
+Third,Marshall,Marshalltown,Hospitial Assistance,Iowa Soldier's Home,0,4,4,42.0442545,-92.9123388,0,Marshalltown,75,Health and Nutrition
+Third,Tama,Toledo,Workshop,County Board of Supervisors,44,0,44,41.9958519,-92.5790517,0,Toledo,76,Workshop
+Third,Tama,Toledo,Clerical Assistance,"Farm Bureau, County Conservation Commission. Relief Office",0,6,6,41.9958519,-92.5790517,0,Toledo,77,Clerical
+Third,Tama,Toledo,Resident Center for Girls,State Juvenile Home,0,20,20,41.9958519,-92.5790517,0,Toledo,78,Education and Childcare
+Third,Wright,Dows,Library Service,Board of Education,0,1,1,42.6562699,-93.502601,0,Dows,80,Education and Childcare
+Third,Wright,Eagle Grove,Workshop,City,44,0,44,42.664138,-93.9043905,0,Eagle Grove,81,Workshop
+Third,Wright,Eagle Grove,Sewing Room,City,0,26,26,42.664138,-93.9043905,0,Eagle Grove,82,Textiles
+Fourth,Allamakee,Waukon,Construction of Swimming Pool,City,31,0,31,43.2694208,-91.475695,0,Waukon,84,Construction and Infrastructure
+Fourth,Allamakee,Waukon,Sewing Room,County Board of Supervisors,0,32,32,43.2694208,-91.475695,0,Waukon,85,Textiles
+Fourth,Buchanan,Independence,Clerical Assistance,"State Employment Service, Farm Security Administration, County Board of Supervisors, R.E.A",0,10,10,42.4685978,-91.8893386,0,Independence,86,Clerical
+Fourth,Buchanan,Independence,Rural Electrification Work,Rural Electrification Cooperative,14,0,14,42.4685978,-91.8893386,0,Independence,87,Construction and Infrastructure
+Fourth,Cerro Gordo,Clear Lake,Recreational Leadership,City,27,1,28,43.1380915,-93.3792003,0,Clear Lake,88,Recreation
+Fourth,Cerro Gordo,Mason City,Workshop,City,85,0,85,43.1535728,-93.2010367,0,Mason City,89,Workshop
+Fourth,Cerro Gordo,Mason City,Sewing Room,"City, County Board of Supervisors",0,75,75,43.1535728,-93.2010367,0,Mason City,90,Textiles
+Fourth,Cerro Gordo,Mason City,Library Service,Public Library,4,5,9,43.1535728,-93.2010367,0,Mason City,91,Education and Childcare
+Fourth,Cerro Gordo,Mason City,Park Improvement,City,63,0,63,43.1535728,-93.2010367,0,Mason City,92,Construction and Infrastructure
+Fourth,Cerro Gordo,Mason City,Clerical Assistance,"County Board of Supervisors, Farm Security Administration, County Farm Bureau, Board of Education, Selective Service Draft Board, Police Department, State Employment Service",1,29,30,43.1535728,-93.2010367,0,Mason City,93,Clerical
+Fourth,Chickasaw,Fredericksburg,Reparing School Furniture,Board of Education,3,0,3,42.9652548,-92.1996196,0,Fredericksburg,94,Workshop
+Fourth,Chickasaw,Lawler,Constructing Cement Drive,City,28,0,28,43.0705301,-92.1501723,0,Lawler,95,Construction and Infrastructure
+Fourth,Chickasaw,Nashua,Library Service,"City, Public Library",0,1,1,42.9527536,-92.5362956,0,Nashua,96,Education and Childcare
+Fourth,Chickasaw,New Hampton,Library Service,"City, Public Library",0,1,1,43.0591412,-92.3176768,0,New Hampton,97,Education and Childcare
+Fourth,Clayton,Elkader,Constructing Baseball Diamond,City,15,0,15,42.8538346,-91.405381,0,Elkader,98,Construction and Infrastructure
+Fourth,Clayton,Guttenberg,Improving Fish Hatchery,U.S. Fish Hatchery,33,16,49,42.7858231,-91.0995735,0,Guttenberg,100,Construction and Infrastructure
+Fourth,Clayton,McGregor,Improving Pikes Peak State Park,State Conservation Commission,13,0,13,43.0184865,-91.1825165,0,McGregor,101,Construction and Infrastructure
+Fourth,Delaware,Delhi,Repairing Educational Buildings,School Board,17,0,17,42.4297143,-91.3309789,0,Delhi,102,Construction and Infrastructure
+Fourth,Delaware,Manchester,Conservation,County Board of Supervisors,24,0,24,42.484154,-91.4554252,0,Manchester,103,Conservation
+Fourth,Delaware,Manchester,Clerical Assistance,"State Employment Service, County Board of Supervisors",0,13,13,42.484154,-91.4554252,0,Manchester,104,Clerical
+Fourth,Fayette,Elgin,City Park Improvement,City,12,0,12,42.9574811,-91.6307065,0,Elgin,105,Construction and Infrastructure
+Fourth,Fayette,Maynard,Hot School Lunches,Public School,0,3,3,42.7738826,-91.8806147,0,Maynard,107,Health and Nutrition
+Fourth,Fayette,Oelwein,Park Improvement,"City, Park Board",74,0,74,42.6733171,-91.9135036,0,Oelwein,108,Construction and Infrastructure
+Fourth,Fayette,West Union,"Athletic Field Improvement, Improving School Grounds",School Board,15,0,15,42.9627837,-91.808219,0,West Union,109,Construction and Infrastructure
+Fourth,Floyd,Charles City,Sewing Room,County Board of Supervisors,0,41,41,43.0663613,-92.6724112,0,Charles City,110,Textiles
+Fourth,Floyd,Charles City,Constructing Athletic Field,Board of Education,30,0,30,43.0663613,-92.6724112,0,Charles City,111,Construction and Infrastructure
+Fourth,Floyd,Charles City,Nursery School,Board of Education,0,1,1,43.0663613,-92.6724112,0,Charles City,112,Education and Childcare
+Fourth,Floyd,Charles City,Clerical Assistance,"State Employment Service, Farm Security Administration, County Board of Supervisors, Farm Bureau, State Highway Commission, County Superintendent of Schools",1,9,10,43.0663613,-92.6724112,0,Charles City,113,Clerical
+Fourth,Floyd,Charles City,Recreational Leadership,"Board of Education, City",19,0,19,43.0663613,-92.6724112,0,Charles City,114,Recreation
+Fourth,Floyd,Charles City,Hospital Assistance,Cedar Valley Hospital,0,1,1,43.0663613,-92.6724112,0,Charles City,115,Health and Nutrition
+Fourth,Floyd,Charles City,Workshop,Board of Education,17,0,17,43.0663613,-92.6724112,0,Charles City,116,Workshop
+Fourth,Howard,Cresco,Rural Electrification Work,County Electric Cooperative,8,5,13,43.3813568,-92.1140547,0,Cresco,118,Construction and Infrastructure
+Fourth,Howard,Cresco,Clerical Assistance,County Board of Supervisors,0,9,9,43.3813568,-92.1140547,0,Cresco,119,Clerical
+Fourth,Mitchell,Osage,Clerical Assistance,"State Employment Service, State Agriculture Extension Service, County Board of Supervisors",2,3,5,43.284081,-92.8111624,0,Osage,120,Clerical
+Fourth,Mitchell,Osage,Library Service,"Board of Supervisors, Board of Education",2,4,6,43.284081,-92.8111624,0,Osage,121,Education and Childcare
+Fourth,Mitchell,St. Ansgar,Rural Electrification Work,Mitchell County R.E.A,12,0,12,43.3783006,-92.9188065,0,St. Ansgar,122,Construction and Infrastructure
+Fourth,Winneshiek,Decorah,Park Improvement,County,45,0,45,43.3041609,-91.7859098,0,Decorah,123,Construction and Infrastructure
+Fourth,Worth,Northwood,Clerical Assistance,"Agriculture Extension Service, County Board of Supervisors",4,0,4,43.4441245,-93.2210371,0,Northwood,125,Clerical
+Fifth,Appanoose,Centerville,Sanitation (Constructing Latrine,Farm Security Administration,19,0,19,40.7341804,-92.8740876,0,Centerville,126,Construction and Infrastructure
+Fifth,Appanoose,Centerville,Workshop,County Board of Supervisors,67,0,67,40.7341804,-92.8740876,0,Centerville,127,Workshop
+Fifth,Appanoose,Centerville,Sewing Room,County Board of Supervisors,0,62,62,40.7341804,-92.8740876,0,Centerville,128,Textiles
+Fifth,Appanoose,Centerville,Clerical Assistance,"State Employment Service, Farm Security Administration, County Agent, Department of Health, Probation Officer",1,12,13,40.7341804,-92.8740876,0,Centerville,129,Clerical
+Fifth,Appanoose,Centerville,Capping Wells (County-Wide Sanitation),Farm Security Administration,23,0,23,40.7341804,-92.8740876,0,Centerville,130,Construction and Infrastructure
+Fifth,Appanoose,Cincinnati,Park Improvement,Conservation Commission,36,0,36,40.6308483,-92.9246459,0,Cincinnati,132,Construction and Infrastructure
+Fifth,Clarke,Osceola,Clerical Assistance,"Farm Security Administration, County Agent, Department of Health, County Superintendent of Schools",1,13,14,43.3684613,-95.6299944,0,Osceola,134,Clerical
+Fifth,Clarke,Woodburn,Sanitation (Constructing Latrine,Farm Security Adminstration,35,0,35,41.0119428,-93.5991047,0,Woodburn,135,Construction and Infrastructure
+Fifth,Clarke,Woodburn,Capping Wells (Countywide sanitation,Farm Security Adminstration,44,2,46,41.0119428,-93.5991047,0,Woodburn,136,Construction and Infrastructure
+Fifth,Davis,Bloomfield,Workshop,Board of Supervisors,54,12,66,40.7516884,-92.4149074,0,Bloomfield,137,Workshop
+Fifth,Davis,Bloomfield,Clerical Assistance,"Farm Security Administration, Agriculture Ajustment Administration, County",0,7,7,40.7516884,-92.4149074,0,Bloomfield,138,Clerical
+Fifth,Decatur,Grand River,Hot School Lunches,Boards of Education,0,3,3,40.8194405,-93.9624481,0,Grand River,139,Health and Nutrition
+Fifth,Decatur,Lamoni,Hot School Lunches,Boards of Education,0,3,3,40.622777,-93.9341158,0,Lamoni,140,Health and Nutrition
+Fifth,Decatur,Leon,Clerical Assistance,"Farm Security Administration, County",0,6,6,40.7403444,-93.7464099,0,Leon,141,Clerical
+Fifth,Decatur,Leon,Workshop,Board of Supervisors,75,8,83,40.7403444,-93.7464099,0,Leon,142,Workshop
+Fifth,Decatur,Leon,Sanitation (Constructing Latrine,Farm Security Administration,22,1,23,40.7403444,-93.7464099,0,Leon,143,Construction and Infrastructure
+Fifth,Jasper,Colfax,Constructing Drainage Ditch,City,21,0,21,41.6777666,-93.245205,0,Colfax,144,Construction and Infrastructure
+Fifth,Jasper,Monroe,Hot School Lunches,Board of Education,0,3,3,41.5222145,-93.1018684,0,Monroe,146,Health and Nutrition
+Fifth,Jasper,Newton,Clerical Assistance,"State Employment Service, Board of Supervisors, Farm Security Administration, County Agent",0,15,15,41.6996927,-93.0537592,0,Newton,147,Clerical
+Fifth,Jasper,Newton,Repairing & Installing Christmas Display,County Board of Supervisors,9,0,9,41.6996927,-93.0537592,0,Newton,148,Construction and Infrastructure
+Fifth,Keokuk,Sigourney,Workshop,Board of Supervisors,49,0,49,41.3330461,-92.2048398,0,Sigourney,149,Workshop
+Fifth,Keokuk,Sigourney,Sewing Room,Board of Supervisors,0,9,9,41.3330461,-92.2048398,0,Sigourney,150,Textiles
+Fifth,Lucas,Chariton,Clerical Assistance,"State Employment Service, City, Farm Security Administration, County Agent, Agriculture Adjustment Administration, County Superintendent of Schools",3,30,33,41.0147507,-93.3072514,0,Chariton,151,Clerical
+Fifth,Lucas,Chariton,Workshop,City,50,0,50,41.0147507,-93.3072514,0,Chariton,152,Workshop
+Fifth,Lucas,Chariton,Street Improvement,City,43,0,43,41.0147507,-93.3072514,0,Chariton,153,Construction and Infrastructure
+Fifth,Lucas,Chariton,Sanitation (Constructing Latrine,Farm Security Adminstration,11,0,11,41.0147507,-93.3072514,0,Chariton,154,Construction and Infrastructure
+Fifth,Lucas,Russell,Improving Cemetary Drive,City,3,2,5,40.9819459,-93.19854,0,Russell,155,Construction and Infrastructure
+Fifth,Mahaska,Oskaloosa,Hospital Assistance,County Hospital,0,15,15,41.2963365,-92.6449612,0,Oskaloosa,156,Health and Nutrition
+Fifth,Mahaska,Oskaloosa,Constructing Shelter,State Conservation Commission,13,0,13,41.2963365,-92.6449612,0,Oskaloosa,157,Construction and Infrastructure
+Fifth,Mahaska,Oskaloosa,Repairing Educational Buildings,Board of Education,10,0,10,41.2963365,-92.6449612,0,Oskaloosa,158,Construction and Infrastructure
+Fifth,Mahaska,Oskaloosa,Park Improvement,Statet Conservation Commission,75,0,75,41.2963365,-92.6449612,0,Oskaloosa,159,Construction and Infrastructure
+Fifth,Mahaska,Oskaloosa,Clerical Assistance,State Employment Service,1,1,2,41.2963365,-92.6449612,0,Oskaloosa,160,Clerical
+Fifth,Monroe,Albia,Sidewalk Improvement,City,79,0,79,41.0266746,-92.8057514,0,Albia,161,Construction and Infrastructure
+Fifth,Monroe,Albia,Nursery Assistance,County,1,11,12,41.0266746,-92.8057514,0,Albia,162,Education and Childcare
+Fifth,Monroe,Albia,Sewing Room,Board of Supervisors,0,51,51,41.0266746,-92.8057514,0,Albia,163,Textiles
+Fifth,Monroe,Albia,Park Improvement,City,46,0,46,41.0266746,-92.8057514,0,Albia,165,Construction and Infrastructure
+Fifth,Monroe,Avery,Library Service,Board of Education,0,2,2,41.0644435,-92.7149531,0,Avery,166,Education and Childcare
+Fifth,Monroe,Hocking,Hot School Lunches,School Board,1,1,2,40.9908417,-92.8204738,0,Hocking,167,Health and Nutrition
+Fifth,Monroe,Lovilia,Workshop,City,41,0,41,41.1358371,-92.9040881,0,Lovilia,168,Workshop
+Fifth,Monroe,Lovilia,Reparing Drainage Ditch,City,3,0,3,41.1358371,-92.9040881,0,Lovilia,169,Construction and Infrastructure
+Fifth,Poweshiek,Grinnell,Sewing Room,Board of Supervisors,0,27,27,41.7430554,-92.7224206,0,Grinnell,170,Textiles
+Fifth,Poweshiek,Grinnell,Workshop,Board of Supervisors,73,0,73,41.7430554,-92.7224206,0,Grinnell,171,Workshop
+Fifth,Ringgold,Mount Ayr,Developing Recreational Facilities,Park Board,9,0,9,40.7147147,-94.235232,0,Mount Ayr,172,Construction and Infrastructure
+Fifth,Ringgold,Mount Ayr,Workshop,County Board Supervisors,62,17,79,40.7147147,-94.235232,0,Mount Ayr,173,Workshop
+Fifth,Ringgold,Mount Ayr,Clerical Assistance,"Farm Bureau, Farm Security Administration, Social Welfare Board, City",0,8,8,40.7147147,-94.235232,0,Mount Ayr,174,Clerical
+Fifth,Union,Creston,Sanitation (Constructing Latrine,Farm Security Administration,14,1,15,41.0586002,-94.3613475,0,Creston,175,Construction and Infrastructure
+Fifth,Union,Creston,Clerical Assistance,"State Employment Service, Farm Security Administration, Farm Bureau, Child Welfare Board, County Superintendent of Schools",1,7,8,41.0586002,-94.3613475,0,Creston,176,Clerical
+Fifth,Union,Creston,Workshop,County Board of Supervisors,34,1,35,41.0586002,-94.3613475,0,Creston,177,Workshop
+Fifth,Wapello,Eldon,Street Improvement,City,44,0,44,40.9186301,-92.2229585,0,Eldon,178,Construction and Infrastructure
+Fifth,Wapello,Eldon,Sewing Room,City,0,35,35,40.9186301,-92.2229585,0,Eldon,179,Textiles
+Fifth,Wapello,Ottumwa,Workshop,County,150,3,153,41.0200145,-92.4112963,0,Ottumwa,180,Workshop
+Fifth,Wapello,Ottumwa,Clerical Assistance,"Agriculture Adjustment Administration, County Agent, Board of Supervisors, Farm Security Administration",5,24,29,41.0200145,-92.4112963,0,Ottumwa,181,Clerical
+Fifth,Wapello,Ottumwa,Constructing Cabins,City,43,0,43,41.0200145,-92.4112963,0,Ottumwa,182,Construction and Infrastructure
+Fifth,Wapello,Ottumwa,Sewing Room,Board of Supervisors,0,66,66,41.0200145,-92.4112963,0,Ottumwa,183,Textiles
+Fifth,Wayne,Allerton,Library Service,Board of Education,0,3,3,40.7063954,-93.3652135,0,Allerton,184,Education and Childcare
+Fifth,Wayne,Allerton,Sanitation (Constructing Latrine,Farm Security Administration,17,0,17,40.7063954,-93.3652135,0,Allerton,185,Construction and Infrastructure
+Fifth,Wayne,Corydon,Clerical Assistance,"Farm Security Administration, County Agent, County Superintendent of Schools",1,10,11,40.7569499,-93.3188229,0,Corydon,186,Clerical
+Fifth,Wayne,Humeston,Constructing Community Building,City,24,1,25,40.858892,-93.4974371,0,Humeston,187,Construction and Infrastructure
+Fifth,Wayne,Seymour,Street Improvement,City,27,0,27,40.6825095,-93.1210405,0,Seymour,188,Construction and Infrastructure
+Fifth,Wayne,Seymour,Sewing Room,City,0,40,40,40.6825095,-93.1210405,0,Seymour,189,Textiles
+Sixth,Dallas,Adel,Nursery School Assistance,Public School,0,4,4,41.6175278,-94.0183875,0,Adel,191,Education and Childcare
+Sixth,Dallas,Perry,Workshop,City,99,39,138,41.8386702,-94.1067623,0,Perry,194,Workshop
+Sixth,Madison,Winterset,Street Improvement,City,57,1,58,41.3345799,-94.0143859,0,Winterset,195,Construction and Infrastructure
+Sixth,Madison,Winterset,Clerical Assistance,"City, Farm Security Administration, County Farm Bureau, Board of Social Welfare",1,5,6,41.3345799,-94.0143859,0,Winterset,196,Clerical
+Sixth,Madison,Winterset,Sewing Room,County Board of Supervisors,0,22,22,41.3345799,-94.0143859,0,Winterset,197,Textiles
+Sixth,Marion,Bussey,Park Improvement,City,7,0,7,41.2044797,-92.8849307,0,Bussey,198,Construction and Infrastructure
+Sixth,Marion,Knoxville,Improving Secondary Roads,County Board of Supervisors,61,1,62,41.3208297,-93.1093708,0,Knoxville,201,Construction and Infrastructure
+Sixth,Marion,Melcher,Sewing Room,City,0,26,26,41.2249966,-93.2413191,0,Melcher,202,Textiles
+Sixth,Marion,Melcher,Repairing Concrete Sidewalks,City,26,0,26,41.2249966,-93.2413191,0,Melcher,203,Construction and Infrastructure
+Sixth,Marion,Melcher,Repairing High School,Board of Education,12,0,12,41.2249966,-93.2413191,0,Melcher,204,Construction and Infrastructure
+Sixth,Marion,Pella,Repairing Fire Station,City,3,0,3,41.4080534,-92.9163091,0,Pella,205,Construction and Infrastructure
+Sixth,Marion,Pella,Library Service,Board of Education,1,1,2,41.4080534,-92.9163091,0,Pella,206,Education and Childcare
+Sixth,Polk,Des Moines,Hospital Assistance,County Hospital,0,4,4,41.5910323,-93.6046655,0,Des Moines,208,Health and Nutrition
+Sixth,Polk,Des Moines,Park Improvement,City,96,0,96,41.5910323,-93.6046655,0,Des Moines,209,Construction and Infrastructure
+Sixth,Polk,Des Moines,Library Assistance,City,2,21,23,41.5910323,-93.6046655,0,Des Moines,210,Education and Childcare
+Sixth,Polk,Des Moines,Photography,City,14,0,14,41.5910323,-93.6046655,0,Des Moines,211,Workshop
+Sixth,Polk,Des Moines,Clerical Assistance,City,21,163,184,41.5910323,-93.6046655,0,Des Moines,212,Clerical
+Sixth,Polk,Des Moines,Concrete Products,City,96,0,96,41.5910323,-93.6046655,0,Des Moines,213,Construction and Infrastructure
+Sixth,Polk,Des Moines,Sewing Room,City,0,294,294,41.5910323,-93.6046655,0,Des Moines,214,Textiles
+Sixth,Polk,Des Moines,Nursery Assistance,Public Schools,0,11,11,41.5910323,-93.6046655,0,Des Moines,215,Education and Childcare
+Sixth,Polk,Des Moines,Workshop,City,363,0,363,41.5910323,-93.6046655,0,Des Moines,216,Workshop
+Sixth,Polk,Des Moines,Constructing Addition to Workshop,City,51,0,51,41.5910323,-93.6046655,0,Des Moines,217,Construction and Infrastructure
+Sixth,Polk,Des Moines,Constructing Sectional Metal Working Shop,City,53,0,53,41.5910323,-93.6046655,0,Des Moines,218,Construction and Infrastructure
+Sixth,Polk,Ft. Des Moines,NYA Unit at Ft. Des Moines,United States Army,92,0,92,41.5202677,-93.6157731,0,Ft. Des Moines,219,Other
+Sixth,Polk,West Des Moines,Park Improvement,City,25,0,25,41.5645337,-93.7595281,0,West Des Moines,220,Construction and Infrastructure
+Sixth,Story,Ames,Sewing Room,Iowa State College Hospital,0,2,2,42.0267703,-93.6170554,0,Ames,221,Textiles
+Sixth,Story,Ames,Constructing Toboggan Slide,Iowa State College,38,0,38,42.0267703,-93.6170554,0,Ames,222,Construction and Infrastructure
+Sixth,Story,Ames,Sewing Room,Iowa State College,0,11,11,42.0267703,-93.6170554,0,Ames,223,Textiles
+Sixth,Story,Colo,Library Service,Library Board,0,1,1,42.0177653,-93.3152072,0,Colo,225,Education and Childcare
+Sixth,Warren,Indianola,Clerical Assistance,Farm Security Administration,1,1,2,41.3605271,-93.5599632,0,Indianola,226,Clerical
+Seventh,Adair,Greenfield,Clerical Assistance,"Farm Security Administration, County Superintendent of Schools, County Farm Bureau, Farm Credit Administration",4,5,9,41.3052657,-94.4613543,0,Greenfield,227,Clerical
+Seventh,Adams,Corning,Clerical Assistance,"County Superintendent of Schools, County Farm Bureau",1,3,4,40.9899862,-94.7408068,0,Corning,228,Clerical
+Seventh,Adams,Corning,Repairing Educational Buildings,Public Schools,2,0,2,40.9899862,-94.7408068,0,Corning,229,Construction and Infrastructure
+Seventh,Adams,Corning,Rural Electrification Work,Adams County Cooperative,2,0,2,40.9899862,-94.7408068,0,Corning,231,Construction and Infrastructure
+Seventh,Audubon,Audubon,Clerical Assistance,"County Farm Bureau, Farm Security Administration, Social Welfare Department",1,10,11,41.670205,-94.9106526,0,Audubon,232,Clerical
+Seventh,Cass,Atlantic,Clerical Assistance,"State Employment Service, County Farm Bureau, Farm Security Administration",0,7,7,41.4036007,-95.0138776,0,Atlantic,234,Clerical
+Seventh,Cass,Atlantic,Workshop,Board of Supervisors,65,48,113,41.4036007,-95.0138776,0,Atlantic,235,Workshop
+Seventh,Cass,Atlantic,Repairing Administration,Board of Supervisors,3,0,3,41.4036007,-95.0138776,0,Atlantic,236,Construction and Infrastructure
+Seventh,Cass,Atlantic,Hot School Lunches,High School,0,2,2,41.4036007,-95.0138776,0,Atlantic,237,Health and Nutrition
+Seventh,Fremont,Sidney,Clerical Assistance,"State Employment Service, City",0,5,5,40.7473867,-95.6468803,0,Sidney,240,Clerical
+Seventh,Fremont,Sidney,Repairing Administration Buildings,County Board of Supervisors,30,0,30,40.7473867,-95.6468803,0,Sidney,241,Construction and Infrastructure
+Seventh,Fremont,Tabor,Water & Sanitation Improvement,City,31,0,31,40.8983329,-95.6713892,0,Tabor,242,Construction and Infrastructure
+Seventh,Fremont,Tabor,Hot School Lunches,Consolidated School,0,7,7,40.8983329,-95.6713892,0,Tabor,243,Health and Nutrition
+Seventh,Harrison,Missouri Valley,Nursery School,Independent School District,0,6,6,41.556381,-95.8877881,0,Missouri Valley,245,Education and Childcare
+Seventh,Harrison,Missouri Valley,Constructing Bathhouse,City,28,0,28,41.556381,-95.8877881,0,Missouri Valley,246,Construction and Infrastructure
+Seventh,Harrison,Woodbine,Rural Electrification Work,County Cooperative,16,1,17,41.7371999,-95.7012869,0,Woodbine,248,Construction and Infrastructure
+Seventh,Harrison,Woodbine,Flood Control,Drainage District Headquarters,54,0,54,41.7371999,-95.7012869,0,Woodbine,249,Construction and Infrastructure
+Seventh,Mills,Glenwood,Library Service,Public Library,0,2,2,41.0469437,-95.7425055,0,Glenwood,250,Education and Childcare
+Seventh,Mills,Glenwood,Park Improvement,Park Board,48,0,48,41.0469437,-95.7425055,0,Glenwood,251,Construction and Infrastructure
+Seventh,Montgomery,Red Oak,Developing Recreational Facilities,Park Board,50,0,50,41.0095189,-95.228247,0,Red Oak,253,Construction and Infrastructure
+Seventh,Montgomery,Red Oak,Clerical Assistance,"City, Old Age Assistance Office, County Farm Bureau, State Employment Service",0,9,9,41.0095189,-95.228247,0,Red Oak,254,Clerical
+Seventh,Page,Clarinda,Workshop,County Board of Supervisors,42,0,42,40.7390162,-95.036958,0,Clarinda,256,Workshop
+Seventh,Page,Clarinda,Hospital Assistance,Municipal Hospital,0,4,4,40.7390162,-95.036958,0,Clarinda,258,Health and Nutrition
+Seventh,Page,Shenandoah,Street Improvement,City,33,0,33,40.7655528,-95.3722103,0,Shenandoah,259,Construction and Infrastructure
+Seventh,Pottawattamie,Council Bluffs,Sewing Room,County Board of Supervisors,0,82,82,41.2621283,-95.8613912,0,Council Bluffs,260,Textiles
+Seventh,Pottawattamie,Council Bluffs,Workshop,County Board of Supervisors,98,29,127,41.2621283,-95.8613912,0,Council Bluffs,261,Workshop
+Seventh,Pottawattamie,Council Bluffs,Park Improvement,Park Board,110,0,110,41.2621283,-95.8613912,0,Council Bluffs,262,Construction and Infrastructure
+Seventh,Pottawattamie,Council Bluffs,Sewing Room,City,0,12,12,41.2621283,-95.8613912,0,Council Bluffs,263,Textiles
+Seventh,Pottawattamie,Council Bluffs,Library Assistance,Public Library,0,2,2,41.2621283,-95.8613912,0,Council Bluffs,264,Education and Childcare
+Seventh,Pottawattamie,Council Bluffs,Constructing Community Building,Park Board,23,0,23,41.2621283,-95.8613912,0,Council Bluffs,265,Construction and Infrastructure
+Seventh,Shelby,Harlan,Clerical Assistance,"State Employment Service, County Farm Bureau, Farm Security Administration, County Relief Office",1,5,6,41.6532994,-95.3250603,0,Harlan,267,Clerical
+Seventh,Shelby,Harlan,Library Service,Public Library,0,1,1,41.6532994,-95.3250603,0,Harlan,268,Education and Childcare
+Seventh,Shelby,Harlan,Workshop,County Board Supervisors,32,0,32,41.6532994,-95.3250603,0,Harlan,269,Workshop
+Seventh,Taylor,Bedford,Workshop,County Board Supervisors,53,0,53,40.6669321,-94.721358,0,Bedford,270,Workshop
+Seventh,Taylor,Bedford,Library Service,Public Library,0,1,1,40.6669321,-94.721358,0,Bedford,271,Education and Childcare
+Seventh,Taylor,Bedford,Clerical Assistance,"Farm Security Administration, State Employment Service, Board of Social Welfare, County Recorder, County Auditor",0,7,7,40.6669321,-94.721358,0,Bedford,272,Clerical
+Seventh,Taylor,Bedford,Sewing Room,County Board of Supervisors,0,31,31,40.6669321,-94.721358,0,Bedford,273,Textiles
+Seventh,Taylor,Conway,Hot School Lunches,Public School,0,2,2,40.7485991,-94.6188551,0,Conway,274,Health and Nutrition
+Eighth,Boone,Boone,Workshop,County Conservation Comission,69,0,69,42.0171798,-93.9254114,0,Boone,276,Workshop
+Eighth,Boone,Boone,Sewing Room,County Board of Supervisors,0,8,8,42.0171798,-93.9254114,0,Boone,277,Textiles
+Eighth,Boone,Boone,Clerical Assistance,"County Board of Supervisors, City",0,8,8,42.0171798,-93.9254114,0,Boone,278,Clerical
+Eighth,Calhoun,Lake City,Constructing Street Markers,City,21,0,21,42.2676802,-94.7339736,0,Lake City,279,Construction and Infrastructure
+Eighth,Calhoun,Rockwell City,Rural Electrification Work,Calhoun County Cooperative,18,2,20,42.3952576,-94.6338671,0,Rockwell City,280,Construction and Infrastructure
+Eighth,Calhoun,Rockwell City,Clerical Assistance,County Board of Supervisors,0,7,7,42.3952576,-94.6338671,0,Rockwell City,281,Clerical
+Eighth,Carroll,Carroll,Workshop,County Board of Supervisors,43,0,43,42.0193628,-94.860335,0,Carroll,282,Workshop
+Eighth,Carroll,Carroll,Clerical Assistance,County Board of Supervisors,0,7,7,42.0193628,-94.860335,0,Carroll,283,Clerical
+Eighth,Carroll,Glidden,Rural Electrification Work,Glidden Cooperative,0,2,2,42.0569297,-94.72887,0,Glidden,284,Construction and Infrastructure
+Eighth,Crawford,Denison,Clerical Assistance,County Board of Supervisors,4,10,14,42.0177658,-95.3552757,0,Denison,285,Clerical
+Eighth,Crawford,Dow City,Remodeling County Garage,County Board of Supervisors,33,0,33,41.9288774,-95.49389,0,Dow City,286,Construction and Infrastructure
+Eighth,Emmet,Estherville,Rural Electrification Work,Rural Cooperative,3,2,5,43.4016255,-94.832764,0,Estherville,287,Construction and Infrastructure
+Eighth,Emmet,Estherville,Clerical Assistance,"Department of Public Welfare, City, County Agriculture Agent",0,7,7,43.4016255,-94.832764,0,Estherville,288,Clerical
+Eighth,Emmet,Estherville,Workshop,City,17,0,17,43.4016255,-94.832764,0,Estherville,289,Workshop
+Eighth,Emmet,Estherville,Sewing Room,County Board of Supervisors,0,31,31,43.4016255,-94.832764,0,Estherville,290,Textiles
+Eighth,Greene,Jefferson,Clerical Assistance,"Farm Security Administration, County Board of Supervisors",0,5,5,41.0131342,-91.9718642,0,Jefferson,291,Clerical
+Eighth,Greene,Jefferson,Construction in Courthouse,County Board of Supervisors,55,0,55,41.0131342,-91.9718642,0,Jefferson,292,Construction and Infrastructure
+Eighth,Hamilton,Ellsworth,Library Assistance,Library Board,0,4,4,42.3128856,-93.5786086,0,Ellsworth,293,Education and Childcare
+Eighth,Hamilton,Webster City,Clerical Assistance,"County Board of Supervisors, State Employment Service",0,5,5,42.4663069,-93.8252471,0,Webster City,294,Clerical
+Eighth,Hamilton,Webster City,Workshop,City,67,0,67,42.4663069,-93.8252471,0,Webster City,295,Workshop
+Eighth,Humboldt,Dakota City,Clerical Assistance,County Board of Supervisors,0,3,3,42.7221935,-94.1971836,0,Dakota City,298,Clerical
+Eighth,Humboldt,Humboldt,Rural Electrification Work,County Cooperative,11,2,13,42.7756032,-94.1956133,0,Humboldt,299,Construction and Infrastructure
+Eighth,Humboldt,Humboldt,Library Service,Library Board,0,1,1,42.7756032,-94.1956133,0,Humboldt,300,Education and Childcare
+Eighth,Kossuth,Algona,Clerical Assistance,State Employment Service,0,2,2,43.0699663,-94.233019,0,Algona,301,Clerical
+Eighth,Kossuth,Algona,Improving Ambrose A. Call State Park,State Conservation Commission,37,0,37,43.0699663,-94.233019,0,Algona,302,Construction and Infrastructure
+Eighth,Palo Alto,Emmetsburg,Clerical Assistance,"City, County Agriculture Agent",0,5,5,43.1127427,-94.6830357,0,Emmetsburg,304,Clerical
+Eighth,Palo Alto,Emmetsburg,Workshop,City,42,16,58,43.1127427,-94.6830357,0,Emmetsburg,305,Workshop
+Eighth,Pocahontas,Pocahontas,Sewing Room,County Board of Supervisors,0,17,17,42.7262681,-94.6477383,0,Pocahontas,306,Textiles
+Eighth,Pocahontas,Pocahontas,Rural Electrification Work,County Cooperative,15,0,15,42.7262681,-94.6477383,0,Pocahontas,307,Construction and Infrastructure
+Eighth,Pocahontas,Pocahontas,Clerical Assistance,"State Employment Service, Department of Public Welfare, Farm Security Administration",0,4,4,42.7262681,-94.6477383,0,Pocahontas,308,Clerical
+Eighth,Webster,Fort Dodge,Improving Cabin,City,1,0,1,42.4974694,-94.1680158,0,Fort Dodge,309,Construction and Infrastructure
+Eighth,Webster,Fort Dodge,Workshop,City,79,37,116,42.4974694,-94.1680158,0,Fort Dodge,310,Workshop
+Eighth,Webster,Fort Dodge,Hospital Assistance,City,0,10,10,42.4974694,-94.1680158,0,Fort Dodge,311,Health and Nutrition
+Eighth,Webster,Fort Dodge,Constructing Dam on Lizard Creek,State Conservation Commission,73,0,73,42.4974694,-94.1680158,0,Fort Dodge,312,Construction and Infrastructure
+Eighth,Webster,Fort Dodge,Clerical Assistance,"City, County Superintendent of Schools, County Board of Supervisors, Farm Security Administration, County Treasurer, County Recorder",1,28,29,42.4974694,-94.1680158,0,Fort Dodge,313,Clerical
+Eighth,Webster,Fort Dodge,Nursery Assistance,City,0,2,2,42.4974694,-94.1680158,0,Fort Dodge,314,Education and Childcare
+Eighth,Webster,Fort Dodge,Park Improvement,Park Board,25,0,25,42.4974694,-94.1680158,0,Fort Dodge,315,Construction and Infrastructure
+Eighth,Winnebago,Forest City,Park Improvement,State Conservation Comission,61,0,61,43.2624559,-93.6371591,0,Forest City,316,Construction and Infrastructure
+Eighth,Winnebago,Forest City,Clerical Assistance,"County Board of Supervisors, State Employment Service",0,10,10,43.2624559,-93.6371591,0,Forest City,317,Clerical
+Eighth,Winnebago,Thompson,Rural Electrification Work,County Cooperative,20,2,22,43.3713445,-93.7735556,0,Thompson,318,Construction and Infrastructure
+Ninth,Buena Vista,Storm Lake,Workshop,City,48,0,48,42.6453271,-95.1992916,0,Storm Lake,320,Workshop
+Ninth,Buena Vista,Storm Lake,Rural Electrification Work,R.E.A. Cooperative,0,2,2,42.6453271,-95.1992916,0,Storm Lake,321,Construction and Infrastructure
+Ninth,Buena Vista,Storm Lake,Clerical Assistance,"County Farm Bureau, Department of Social Welfare",0,3,3,42.6453271,-95.1992916,0,Storm Lake,322,Clerical
+Ninth,Cherokee,Cherokee,Workshop,City,40,1,41,42.7247968,-95.6249803,0,Cherokee,323,Workshop
+Ninth,Cherokee,Cherokee,Clerical Assistance,"State Employment Service, Department of Social Welfare",0,9,9,42.7247968,-95.6249803,0,Cherokee,324,Clerical
+Ninth,Cherokee,Cherokee,Repairing Recreational Facilities,City,17,1,18,42.7247968,-95.6249803,0,Cherokee,325,Construction and Infrastructure
+Ninth,Cherokee,Cherokee,Sewing Room,City,0,29,29,42.7247968,-95.6249803,0,Cherokee,326,Textiles
+Ninth,Clay,Spencer,Repairing Fair Buildings,County Fair Board,15,0,15,43.1413578,-95.1444393,0,Spencer,328,Construction and Infrastructure
+Ninth,Clay,Spencer,Recreational Leadership,City,1,2,3,43.1413578,-95.1444393,0,Spencer,329,Recreation
+Ninth,Clay,Spencer,Clerical Assistance,"State Employment Service, Farm Security Administration",0,1,1,43.1413578,-95.1444393,0,Spencer,330,Clerical
+Ninth,Clay,Spencer,Sewing Room,County Board of Supervisors,0,52,52,43.1413578,-95.1444393,0,Spencer,331,Textiles
+Ninth,Dickenson,Lake Park,Constructing Shelter House in Trappers Bay State Park,Iowa State Conservation Commission,12,0,12,43.45552,-95.3208337,0,Lake Park,332,Construction and Infrastructure
+Ninth,Dickenson,Spirit Lake,Library Service,Library Board,0,3,3,43.4221843,-95.1022169,0,Spirit Lake,333,Education and Childcare
+Ninth,Ida,Arthur,Recreational Leadership,Board of Education,3,0,3,42.3347078,-95.3474969,0,Arthur,334,Recreation
+Ninth,Ida,Ida Grove,Rural Electrification Work,Glidden R.E.A. Cooperative,1,1,2,42.3449871,-95.4716666,0,Ida Grove,335,Construction and Infrastructure
+Ninth,Ida,Ida Grove,Prepairing Visual Aid Exhibit,Board of Education,0,16,16,42.3449871,-95.4716666,0,Ida Grove,336,Education and Childcare
+Ninth,Ida,Ida Grove,Street Improvement,City,17,0,17,42.3449871,-95.4716666,0,Ida Grove,337,Construction and Infrastructure
+Ninth,Lyon,Rock Rapids,Rural Electrification Work,Lyon County Cooperative,3,3,6,43.427195,-96.17586,0,Rock Rapids,338,Construction and Infrastructure
+Ninth,Lyon,Rock Rapids,Clerical Assistance,"County Farm Bureau, County Auditor",0,5,5,43.427195,-96.17586,0,Rock Rapids,339,Clerical
+Ninth,Lyon,Rock Rapids,Hot School Lunches,Board of Education,0,1,1,43.427195,-96.17586,0,Rock Rapids,340,Health and Nutrition
+Ninth,Monana,Onawa,Rural Electrification Work,Monona County Cooperative,3,4,7,42.0268093,-96.0974287,0,Onawa,341,Construction and Infrastructure
+Ninth,Monana,Onawa,Clerical Assistance,"Farm Security Administration, County Clerk of Courts, State Employment Service, and County Agent",1,5,6,42.0268093,-96.0974287,0,Onawa,342,Clerical
+Ninth,O'Brien,Primghar,Rural Electrification Work,O'Brien County Cooperative,2,1,3,43.086922,-95.627232,0,Primghar,343,Construction and Infrastructure
+Ninth,O'Brien,Sheldon,Workshop,City,24,4,28,43.1810844,-95.8561126,0,Sheldon,346,Workshop
+Ninth,Osceola,Sibley,Workshop,City,41,6,47,43.399136,-95.75196,0,Sibley,348,Workshop
+Ninth,Osceola,Sibley,Rural Electrification Work,Osceola County Cooperative,0,2,2,43.399136,-95.75196,0,Sibley,349,Construction and Infrastructure
+Ninth,Osceola,Sibley,Clerical Assistance,"County Agent, County Auditor, Public Health Nurse",0,2,2,43.399136,-95.75196,0,Sibley,350,Clerical
+Ninth,Plymouth,Kingsley,Recreational Leadership,City,2,1,3,42.5882174,-95.9672874,0,Kingsley,351,Recreation
+Ninth,Plymouth,LeMars,Workshop,County Board of Supervisors,58,6,64,42.78097665,-96.1731071,0,LeMars,352,Workshop
+Ninth,Plymouth,LeMars,Rural Electrification Work,Plymouth County Cooperative,1,2,3,42.78097665,-96.1731071,0,LeMars,353,Construction and Infrastructure
+Ninth,Plymouth,LeMars,Sewing Room,County Board of Supervisors,0,45,45,42.78097665,-96.1731071,0,LeMars,354,Textiles
+Ninth,Plymouth,LeMars,Clerical Assistance,"County Board of Supervisors, Public Health Nurse",0,2,2,42.78097665,-96.1731071,0,LeMars,355,Clerical
+Ninth,Plymouth,LeMars,Public Health & Hospital Work,County Board of Supervisors,0,2,2,42.78097665,-96.1731071,0,LeMars,356,Health and Nutrition
+Ninth,Sac,Lake View,Remodeling Educational Buildings,Board of Education,8,0,8,42.3062262,-95.0521551,0,Lake View,357,Construction and Infrastructure
+Ninth,Sac,Odebolt,Library Service,Board of Education,0,5,5,42.3122068,-95.2505501,0,Odebolt,358,Education and Childcare
+Ninth,Sac,Odebolt,Repairing Educational Buildings,Board of Education,20,0,20,42.3122068,-95.2505501,0,Odebolt,359,Construction and Infrastructure
+Ninth,Sac,Sac City,Workshop,Board of Education,14,3,17,42.4222033,-94.9897109,0,Sac City,360,Workshop
+Ninth,Sac,Sac County,Rural Electrification Work,Sac County Cooperative,2,3,5,42.3797854,-95.0825306,0,Sac County,361,Construction and Infrastructure
+Ninth,Sac,Sac City,Hot School Lunches,Board of Education,0,3,3,42.4222033,-94.9897109,0,Sac City,362,Health and Nutrition
+Ninth,Sioux,Orange City,Workshop,City,41,0,41,43.0072424,-96.0583138,0,Orange City,364,Workshop
+Ninth,Sioux,Orange City,Rural Electrification Work,Sioux County Cooperative,3,1,4,43.0072424,-96.0583138,0,Orange City,365,Construction and Infrastructure
+Ninth,Sioux,Orange City,Clerical Assistance,County Farm Bureau,0,4,4,43.0072424,-96.0583138,0,Orange City,366,Clerical
+Ninth,Woodbury,Moville,Rural Electrification Work,Woodbury County Cooperative,4,2,6,42.488796,-96.07243,0,Moville,367,Construction and Infrastructure
+Ninth,Woodbury,Sioux City,Hospital Assistance,County Hospital,5,1,6,42.4966815,-96.4058782,0,Sioux City,368,Health and Nutrition
+Ninth,Woodbury,Sioux City,Workshop,City,77,0,77,42.4966815,-96.4058782,0,Sioux City,369,Workshop
+Ninth,Woodbury,Sioux City,Sewing Room,County Board of Supervisors,0,48,48,42.4966815,-96.4058782,0,Sioux City,370,Textiles
+Ninth,Woodbury,Sioux City,Recreational Leadership,City,4,4,8,42.4966815,-96.4058782,0,Sioux City,371,Recreation
+Ninth,Woodbury,Sioux City,Repairing Educational Buildings,Board of Education,11,1,12,42.4966815,-96.4058782,0,Sioux City,372,Construction and Infrastructure
+Ninth,Woodbury,Sioux City,Workshop,City,58,0,58,42.4966815,-96.4058782,0,Sioux City,373,Workshop
+Ninth,Woodbury,Sioux City,Sewing Room,City,0,9,9,42.4966815,-96.4058782,0,Sioux City,374,Textiles
+Ninth,Woodbury,Sioux City,Art Center Assistance,City,42,6,48,42.4966815,-96.4058782,0,Sioux City,375,Education and Childcare
+Ninth,Woodbury,Sioux City,Clerical Assistance,"State Employment Service, Department of Public Safety, Board of Education, Board of Supervisors, Farm Security Administration, City, U.S. Dept. of Agriculture, Board of Health, Emergency Crop & Seed Loan, City Street Dep't",1,44,45,42.4966815,-96.4058782,0,Sioux City,376,Clerical
+Ninth,Woodbury,Sioux City,Park Improvement,City,60,0,60,42.4966815,-96.4058782,0,Sioux City,377,Construction and Infrastructure
+Ninth,Woodbury,Sioux City,Prepairing of Exhibits,County Superintendent Schools,0,7,7,42.4966815,-96.4058782,0,Sioux City,378,Education and Childcare
+Ninth,Woodbury,Sioux City,Sewing Room,County,0,36,36,42.4966815,-96.4058782,0,Sioux City,379,Textiles
+Ninth,Woodbury,Sioux City,Improvements in Stone Park,State Conservation Commission,87,0,87,42.4966815,-96.4058782,0,Sioux City,380,Construction and Infrastructure
+Ninth,Woodbury,Sioux City,Nursery School Assistance,City,0,18,18,42.4966815,-96.4058782,0,Sioux City,381,Education and Childcare
