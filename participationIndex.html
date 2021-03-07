@@ -56,6 +56,10 @@
       font-weight: bold;
     }
 
+    p {
+      margin: 2px !important;
+    }
+
     /* style the map */
     #map {
       position: absolute;
@@ -196,6 +200,7 @@
         },
         onEachFeature: function(feature, layer) {
           let props = layer.feature.properties;
+/*
           let popUp = "<b>" + props["COUNTY_NAM"] + " County</b><hr>Clerical: " + props["Clerical"] + "; " + (props["Clerical"]/props["Total"]*100).toFixed(2) + "%" +
                       "<br>Conservation: " + props["Conservation"] + "; " + (props["Conservation"]/props["Total"]*100).toFixed(2) + "%" +
                       "<br>Construction and Infrastructure: " + props["Construction and Infrastructure"] + "; " + (props["Construction and Infrastructure"]/props["Total"]*100).toFixed(2) + "%" +
@@ -205,15 +210,28 @@
                       "<br>Textiles: " + props["Textiles"] + "; " + (props["Textiles"]/props["Total"]*100).toFixed(2) + "%" +
                       "<br>Workshop: " + props["Workshop"] + "; " + (props["Workshop"]/props["Total"]*100).toFixed(2) + "%" +
                       "<br>Other: " + props["Other"] + "; " + (props["Other"]/props["Total"]*100).toFixed(2) + "%";
-          layer.bindPopup(popUp, {
+*/        let div = $('<div id="info"><b>' + props["COUNTY_NAM"] + " County" + '</b><hr>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(75,0,130)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,69,0)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,165,0)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,139,139)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,0,0)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,255,255)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,0,255)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(0,128,0)" /></svg></p>' +
+                      '<p><svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgb(255,255,0)" /></svg></p>' +'</div>')[0];
+          let popUp = L.tooltip().setContent(div);
+          layer.bindTooltip(popUp, {
             closeButton: false,
           });
+          /*
           layer.on('mouseover', function() {
             this.openPopup();
           });
           layer.on('mouseout', function() {
             this.closePopup();
           });
+          */
         }
       }).addTo(map);
 
